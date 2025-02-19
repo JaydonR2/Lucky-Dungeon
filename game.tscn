@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://bx52rofse4avo"]
+[gd_scene load_steps=2 format=3 uid="uid://bx52rofse4avo"]
+
+[sub_resource type="TileSet" id="TileSet_lhf7i"]
 
 [node name="Game" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_lhf7i")
+format = 2
