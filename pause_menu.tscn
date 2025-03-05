@@ -17,7 +17,7 @@ script = ExtResource("1_hdmo1")
 layout_mode = 2
 offset_right = 59.0
 offset_bottom = 75.0
-scale = Vector2(1.08905, 0.985964)
+scale = Vector2(1.30081, 1.18038)
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 0

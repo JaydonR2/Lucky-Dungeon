@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bx52rofse4avo"]
+[gd_scene load_steps=5 format=3 uid="uid://bx52rofse4avo"]
 
 [ext_resource type="Script" uid="uid://dfi72jwor0g8s" path="res://game.gd" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="2_feb5d"]
+[ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="3_feb5d"]
 
 [sub_resource type="TileSet" id="TileSet_lhf7i"]
 
@@ -9,7 +10,8 @@
 script = ExtResource("1_e2o6t")
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2(11, 0)
+position = Vector2(568, 304)
+scale = Vector2(2.91718, 2.37017)
 tile_set = SubResource("TileSet_lhf7i")
 format = 2
 
@@ -17,8 +19,21 @@ format = 2
 
 [node name="Pause_menu" parent="." instance=ExtResource("2_feb5d")]
 visible = false
-offset_left = 489.0
-offset_top = 241.0
-offset_right = 489.0
-offset_bottom = 241.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 467.0
+offset_top = 200.0
+offset_right = 467.0
+offset_bottom = 200.0
 scale = Vector2(2.55542, 2.16422)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="pause_button" parent="." instance=ExtResource("3_feb5d")]
+offset_left = 1099.0
+offset_top = 7.0
+offset_right = 1099.0
+offset_bottom = 7.0

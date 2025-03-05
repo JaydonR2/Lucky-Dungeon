@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=3 uid="uid://bsqixovrqmxws"]
+
+[ext_resource type="Script" uid="uid://lh1tmxss32cv" path="res://pause_button.gd" id="1_d5o6i"]
+[ext_resource type="Texture2D" uid="uid://3s8c7ykpmku3" path="res://Icons/play_icon.svg" id="2_d5o6i"]
+[ext_resource type="Texture2D" uid="uid://bdw67spqqx4lk" path="res://Icons/Pause_icon (2).svg" id="3_5b2kk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5b2kk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6y8j0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f44ey"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tkhyx"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_medu7"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="pause_button" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d5o6i")
+
+[node name="play" type="Button" parent="."]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.0487595, 0.0487595)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5b2kk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_6y8j0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_f44ey")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tkhyx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_medu7")
+icon = ExtResource("2_d5o6i")
+
+[node name="pause" type="Button" parent="."]
+visible = false
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.0487595, 0.0487595)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5b2kk")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_6y8j0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_f44ey")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tkhyx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_medu7")
+icon = ExtResource("3_5b2kk")
+
+[connection signal="pressed" from="play" to="." method="_on_play_pressed"]
