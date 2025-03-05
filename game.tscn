@@ -1,9 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://bx52rofse4avo"]
+[gd_scene load_steps=4 format=3 uid="uid://bx52rofse4avo"]
+
+[ext_resource type="Script" uid="uid://dfi72jwor0g8s" path="res://game.gd" id="1_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="2_feb5d"]
 
 [sub_resource type="TileSet" id="TileSet_lhf7i"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_e2o6t")
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2(11, 0)
 tile_set = SubResource("TileSet_lhf7i")
 format = 2
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Pause_menu" parent="." instance=ExtResource("2_feb5d")]
+visible = false
+offset_left = 489.0
+offset_top = 241.0
+offset_right = 489.0
+offset_bottom = 241.0
+scale = Vector2(2.55542, 2.16422)
