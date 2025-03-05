@@ -1,6 +1,8 @@
-[gd_resource type="Theme" load_steps=5 format=3 uid="uid://d4apsnecq1e0m"]
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://d4apsnecq1e0m"]
 
+[ext_resource type="FontFile" uid="uid://crbh8v5i8xml" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Regular.ttf" id="1_5nl6s"]
 [ext_resource type="StyleBox" uid="uid://bxen3o1f1t4ru" path="res://hover_style_box.tres" id="1_y3u7b"]
+[ext_resource type="FontFile" uid="uid://debyuq5evgwj0" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Bold.ttf" id="3_5nl6s"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y3u7b"]
 
@@ -31,7 +33,7 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 expand_margin_left = 10.0
 expand_margin_top = 5.0
-expand_margin_right = 10.0
+expand_margin_right = 15.0
 expand_margin_bottom = 5.0
 shadow_color = Color(0.136826, 0.136826, 0.136826, 0.6)
 shadow_size = 3
@@ -44,6 +46,7 @@ Button/colors/font_hover_color = Color(0, 0, 0, 1)
 Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 Button/colors/font_pressed_color = Color(0, 0, 0, 1)
 Button/font_sizes/font_size = 14
+Button/fonts/font = ExtResource("1_5nl6s")
 Button/styles/disabled = null
 Button/styles/focus = SubResource("StyleBoxEmpty_y3u7b")
 Button/styles/hover = ExtResource("1_y3u7b")
@@ -52,5 +55,6 @@ Button/styles/normal = SubResource("StyleBoxFlat_imipj")
 Button/styles/pressed = ExtResource("1_y3u7b")
 Label/colors/font_color = Color(1, 1, 1, 1)
 Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/fonts/font = ExtResource("3_5nl6s")
 Panel/styles/panel = SubResource("StyleBoxFlat_5nl6s")
 VBoxContainer/constants/separation = 4
