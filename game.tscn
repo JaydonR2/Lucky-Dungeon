@@ -1,5 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bx52rofse4avo"]
 
+
 [ext_resource type="Script" uid="uid://dfi72jwor0g8s" path="res://game.gd" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="2_feb5d"]
 [ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="3_feb5d"]
@@ -33,6 +34,7 @@ offset_top = 284.0
 offset_right = 545.0
 offset_bottom = 284.0
 scale = Vector2(0.960175, 1.01674)
+
 size_flags_vertical = 4
 
 [node name="pause_button" parent="." instance=ExtResource("3_feb5d")]
