@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bx52rofse4avo"]
+[gd_scene load_steps=6 format=3 uid="uid://bx52rofse4avo"]
+
 
 [ext_resource type="Script" uid="uid://dfi72jwor0g8s" path="res://game.gd" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="2_feb5d"]
 [ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="3_feb5d"]
+[ext_resource type="PackedScene" uid="uid://cgecforh33lgp" path="res://background.tscn" id="4_fc0e3"]
 
 [sub_resource type="TileSet" id="TileSet_lhf7i"]
 
@@ -15,6 +17,9 @@ scale = Vector2(2.91718, 2.37017)
 tile_set = SubResource("TileSet_lhf7i")
 format = 2
 
+[node name="Background" parent="." instance=ExtResource("4_fc0e3")]
+position = Vector2(344, 116)
+
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Pause_menu" parent="." instance=ExtResource("2_feb5d")]
@@ -24,12 +29,12 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 467.0
-offset_top = 200.0
-offset_right = 467.0
-offset_bottom = 200.0
-scale = Vector2(2.55542, 2.16422)
-size_flags_horizontal = 4
+offset_left = 545.0
+offset_top = 284.0
+offset_right = 545.0
+offset_bottom = 284.0
+scale = Vector2(0.960175, 1.01674)
+
 size_flags_vertical = 4
 
 [node name="pause_button" parent="." instance=ExtResource("3_feb5d")]
