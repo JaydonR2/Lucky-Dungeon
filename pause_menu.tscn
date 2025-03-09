@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b48fjx60a3lpv"]
 
 [ext_resource type="Script" uid="uid://rli03w6uv48k" path="res://pause_menu.gd" id="1_hdmo1"]
-[ext_resource type="Theme" uid="uid://d4apsnecq1e0m" path="res://button_theme.tres" id="1_nwcfo"]
+[ext_resource type="Theme" uid="uid://b7ragqt51e283" path="res://button_theme.tres" id="1_nwcfo"]
 [ext_resource type="Material" uid="uid://dx2rhubr8qxnn" path="res://Textures/blur.tres" id="3_05uyy"]
 
 [node name="Pause_menu" type="Control"]
@@ -32,7 +32,6 @@ grow_vertical = 2
 scale = Vector2(32.3799, 20.3289)
 
 [node name="Panel" type="Panel" parent="."]
-
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -46,7 +45,6 @@ offset_bottom = 37.5
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.72833, 1.43856)
-
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 0

@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://bx52rofse4avo"]
+[gd_scene load_steps=8 format=3 uid="uid://bx52rofse4avo"]
 
-[ext_resource type="Script" path="res://game.gd" id="1_e2o6t"]
-[ext_resource type="PackedScene" path="res://pause_menu.tscn" id="2_feb5d"]
-[ext_resource type="PackedScene" path="res://pause_button.tscn" id="3_feb5d"]
-[ext_resource type="PackedScene" path="res://background.tscn" id="4_fc0e3"]
-[ext_resource type="PackedScene" uid="uid://chmg68ctpqfpt" path="res://player.tscn" id="5_q8r6a"]
+[ext_resource type="Script" uid="uid://dfi72jwor0g8s" path="res://game.gd" id="1_e2o6t"]
+[ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="2_feb5d"]
+[ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="3_feb5d"]
+[ext_resource type="PackedScene" uid="uid://cgecforh33lgp" path="res://background.tscn" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://bt1y1u8tsrjn1" path="res://player.tscn" id="5_q8r6a"]
+[ext_resource type="PackedScene" uid="uid://be620seqajcqf" path="res://menu/menu.tscn" id="7_j5wjh"]
 
 [sub_resource type="TileSet" id="TileSet_lhf7i"]
 
@@ -47,4 +48,13 @@ offset_bottom = 7.0
 position = Vector2(596, 305)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(2, 2)
+position = Vector2(-20, 20)
+scale = Vector2(6.82229, 9.6519)
+
+[node name="Menu" parent="." instance=ExtResource("7_j5wjh")]
+visible = false
+offset_left = 7.0
+offset_top = 119.0
+offset_right = 7.0
+offset_bottom = 119.0
+scale = Vector2(0.948768, 0.779335)

@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=7 format=3 uid="uid://b7ragqt51e283"]
 
 [ext_resource type="FontFile" uid="uid://crbh8v5i8xml" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Regular.ttf" id="1_5nl6s"]
-[ext_resource type="StyleBox" path="res://hover_style_box.tres" id="1_y3u7b"]
+[ext_resource type="StyleBox" uid="uid://bxen3o1f1t4ru" path="res://hover_style_box.tres" id="1_y3u7b"]
 [ext_resource type="FontFile" uid="uid://debyuq5evgwj0" path="res://Godot-Fontpack-d244bf6170b399a6d4d26a0d906058ddf2dafdf1/fonts/xolonium/xolonium-fonts-4.1/ttf/Xolonium-Bold.ttf" id="3_5nl6s"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y3u7b"]
