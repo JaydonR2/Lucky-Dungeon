@@ -11,12 +11,12 @@ config_version=5
 [application]
 
 config/name="Lucky Dungeon"
-run/main_scene="uid://bx52rofse4avo"
-config/features=PackedStringArray("4.4", "Forward Plus")
+run/main_scene="res://game.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/texture_fonts/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 

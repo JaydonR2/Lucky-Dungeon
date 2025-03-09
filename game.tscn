@@ -1,10 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bx52rofse4avo"]
+[gd_scene load_steps=7 format=3 uid="uid://bx52rofse4avo"]
 
-
-[ext_resource type="Script" uid="uid://dfi72jwor0g8s" path="res://game.gd" id="1_e2o6t"]
-[ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="2_feb5d"]
-[ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="3_feb5d"]
-[ext_resource type="PackedScene" uid="uid://cgecforh33lgp" path="res://background.tscn" id="4_fc0e3"]
+[ext_resource type="Script" path="res://game.gd" id="1_e2o6t"]
+[ext_resource type="PackedScene" path="res://pause_menu.tscn" id="2_feb5d"]
+[ext_resource type="PackedScene" path="res://pause_button.tscn" id="3_feb5d"]
+[ext_resource type="PackedScene" path="res://background.tscn" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://chmg68ctpqfpt" path="res://player.tscn" id="5_q8r6a"]
 
 [sub_resource type="TileSet" id="TileSet_lhf7i"]
 
@@ -18,12 +18,13 @@ tile_set = SubResource("TileSet_lhf7i")
 format = 2
 
 [node name="Background" parent="." instance=ExtResource("4_fc0e3")]
-position = Vector2(344, 116)
+position = Vector2(321, 103)
 
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Pause_menu" parent="." instance=ExtResource("2_feb5d")]
 visible = false
+z_index = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -34,7 +35,6 @@ offset_top = 284.0
 offset_right = 545.0
 offset_bottom = 284.0
 scale = Vector2(0.960175, 1.01674)
-
 size_flags_vertical = 4
 
 [node name="pause_button" parent="." instance=ExtResource("3_feb5d")]
@@ -42,3 +42,9 @@ offset_left = 1099.0
 offset_top = 7.0
 offset_right = 1099.0
 offset_bottom = 7.0
+
+[node name="Player" parent="." instance=ExtResource("5_q8r6a")]
+position = Vector2(596, 305)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(2, 2)
