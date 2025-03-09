@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cfwekoxw0u4vs"]
+
+[ext_resource type="Script" uid="uid://bl6b5vtjyc4d5" path="res://Player.gd" id="1_agnxh"]
+[ext_resource type="Texture2D" uid="uid://dn3rfw8vehl1s" path="res://Entities/Npc's/Knight/Idle/Player.png" id="2_vgq8c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kyk50"]
+size = Vector2(21, 30)
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_agnxh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_kyk50")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_vgq8c")
