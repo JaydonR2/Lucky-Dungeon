@@ -1,7 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://dt407uvawetra"]
+[gd_scene load_steps=3 format=3 uid="uid://bj4vov6dombt"]
 
-[ext_resource type="Script" path="res://start_menu.gd" id="1_ia0g5"]
 [ext_resource type="Texture2D" uid="uid://bykoa6ovqpgms" path="res://menu/menu_background.jpeg" id="2_vpdu5"]
+
+[sub_resource type="GDScript" id="GDScript_jwbto"]
+script/source = "extends Control
+
+#func _ready():
+#	$VBoxContainer/StartButton.grab_focus()
+
+func _on_start_button_pressed() -> void:
+	pass
+	#get_tree().change_scene_to_file(\"scene path\")
+	
+func _on_options_button_pressed() -> void:
+	pass # Replace with function body.
+	#get_tree().change_scene_to_file(\"Options.tscn\")
+
+
+func _on_quit_button_pressed() -> void:
+	get_tree().quit()
+"
 
 [node name="start_menu" type="Control"]
 layout_mode = 3
@@ -10,7 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ia0g5")
+script = SubResource("GDScript_jwbto")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
