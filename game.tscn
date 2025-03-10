@@ -1,12 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://bx52rofse4avo"]
+[gd_scene load_steps=9 format=3 uid="uid://bx52rofse4avo"]
 
 [ext_resource type="Script" uid="uid://dfi72jwor0g8s" path="res://game.gd" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="2_feb5d"]
 [ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="3_feb5d"]
 [ext_resource type="PackedScene" uid="uid://cgecforh33lgp" path="res://background.tscn" id="4_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://bt1y1u8tsrjn1" path="res://player.tscn" id="5_q8r6a"]
+[ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="5_ryrav"]
 
 [sub_resource type="TileSet" id="TileSet_lhf7i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eow3j"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_e2o6t")
@@ -43,9 +47,21 @@ offset_top = 7.0
 offset_right = 1099.0
 offset_bottom = 7.0
 
+[node name="reset" type="Button" parent="."]
+offset_left = 1046.0
+offset_top = 6.0
+offset_right = 1854.0
+offset_bottom = 814.0
+scale = Vector2(0.0546771, 0.0546771)
+theme_override_styles/normal = SubResource("StyleBoxFlat_eow3j")
+icon = ExtResource("5_ryrav")
+
 [node name="Player" parent="." instance=ExtResource("5_q8r6a")]
 position = Vector2(596, 305)
+scale = Vector2(3.53995, 3.53995)
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(-20, 20)
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 325)
 scale = Vector2(6.82229, 9.6519)
+
+[connection signal="pressed" from="reset" to="." method="_on_reset_pressed"]

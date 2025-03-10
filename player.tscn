@@ -1,16 +1,16 @@
 [gd_scene load_steps=5 format=3 uid="uid://bt1y1u8tsrjn1"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_bdpxd"]
-[ext_resource type="Texture2D" uid="uid://dxmvala36y5ub" path="res://icon.svg" id="1_uq0bp"]
+[ext_resource type="Texture2D" uid="uid://ch4omcpchcorc" path="res://Player_sprite.png" id="2_onrkg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ospa4"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_uq0bp")
+"texture": ExtResource("2_onrkg")
 }],
 "loop": true,
-"name": &"default",
+"name": &"new_animation",
 "speed": 5.0
 }]
 
@@ -25,6 +25,7 @@ script = ExtResource("1_bdpxd")
 position = Vector2(-1, -1)
 scale = Vector2(0.492188, 0.5)
 sprite_frames = SubResource("SpriteFrames_ospa4")
+animation = &"new_animation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -2)
