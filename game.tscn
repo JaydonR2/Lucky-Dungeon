@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bx52rofse4avo"]
+[gd_scene load_steps=10 format=3 uid="uid://bx52rofse4avo"]
 
 [ext_resource type="Script" uid="uid://dfi72jwor0g8s" path="res://game.gd" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="2_feb5d"]
@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="5_ryrav"]
 
 [sub_resource type="TileSet" id="TileSet_lhf7i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ryrav"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eow3j"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -48,11 +51,12 @@ offset_right = 1099.0
 offset_bottom = 7.0
 
 [node name="reset" type="Button" parent="."]
-offset_left = 1046.0
-offset_top = 6.0
-offset_right = 1854.0
-offset_bottom = 814.0
-scale = Vector2(0.0546771, 0.0546771)
+offset_left = 1057.0
+offset_top = 11.0
+offset_right = 1857.0
+offset_bottom = 811.0
+scale = Vector2(0.0428735, 0.0405039)
+theme_override_styles/hover = SubResource("StyleBoxFlat_ryrav")
 theme_override_styles/normal = SubResource("StyleBoxFlat_eow3j")
 icon = ExtResource("5_ryrav")
 
