@@ -10,12 +10,17 @@ script/source = "extends Node2D
 
 func _on_scene_transition_body_entered(body: Node2D) -> void:
 	if body.name == \"Player\":
-		get_tree().change_scene_to_file(\"res://Rooms/RoomR1.tscn\")
+		call_deferred(\"_change_sceneRoomR1\")
 
+func _change_sceneRoomR1():
+	get_tree().change_scene_to_file(\"res://Rooms/RoomR1.tscn\")
 
 func _on_scene_tran_up_body_entered(body: Node2D) -> void:
 	if body.name == \"Player\":
-		get_tree().change_scene_to_file(\"res://Rooms/RoomU1.tscn\")
+		call_deferred(\"_change_sceneRoomU1\")
+		
+func _change_sceneRoomU1():
+	get_tree().change_scene_to_file(\"res://Rooms/RoomU1.tscn\")
 "
 
 [sub_resource type="GDScript" id="GDScript_rkvpa"]
