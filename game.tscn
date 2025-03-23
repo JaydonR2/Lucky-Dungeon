@@ -91,3 +91,4 @@ position = Vector2(310, 90)
 scale = Vector2(1.61804, 2.96498)
 
 [connection signal="pressed" from="reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="SaveIcon" to="." method="_on_save_icon_pressed"]
