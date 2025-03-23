@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bx52rofse4avo"]
+[gd_scene load_steps=12 format=3 uid="uid://bx52rofse4avo"]
 
 [ext_resource type="Script" uid="uid://dfi72jwor0g8s" path="res://game.gd" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="2_feb5d"]
@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cgecforh33lgp" path="res://Rooms/start_room.tscn" id="4_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://bt1y1u8tsrjn1" path="res://player.tscn" id="5_q8r6a"]
 [ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="5_ryrav"]
+[ext_resource type="PackedScene" path="res://sword.tscn" id="7_j5wjh"]
+[ext_resource type="PackedScene" path="res://Chest.tscn" id="8_vef74"]
 
 [sub_resource type="TileSet" id="TileSet_lhf7i"]
 
@@ -74,5 +76,18 @@ position = Vector2(1137, 540)
 
 [node name="Spawnup" type="Marker2D" parent="."]
 position = Vector2(577, 39)
+
+[node name="Sword" parent="." instance=ExtResource("7_j5wjh")]
+position = Vector2(145, 113)
+rotation = -0.385102
+scale = Vector2(1.22879, 1.22879)
+
+[node name="Chest2" parent="." instance=ExtResource("8_vef74")]
+position = Vector2(1051, 410)
+scale = Vector2(2.39836, 3.40719)
+
+[node name="Chest" parent="." instance=ExtResource("8_vef74")]
+position = Vector2(311, 85)
+scale = Vector2(2.0668, 3.78731)
 
 [connection signal="pressed" from="reset" to="." method="_on_reset_pressed"]
