@@ -35,6 +35,7 @@ offset_right = 70.0
 grow_vertical = 0
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
+process_mode = 3
 layout_mode = 2
 text = "Start"
 
