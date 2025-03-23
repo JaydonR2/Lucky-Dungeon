@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dfi72jwor0g8s" path="res://game.gd" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="2_feb5d"]
 [ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="3_feb5d"]
-[ext_resource type="PackedScene" uid="uid://cgecforh33lgp" path="res://start_room.tscn" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://cgecforh33lgp" path="res://Rooms/start_room.tscn" id="4_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://bt1y1u8tsrjn1" path="res://player.tscn" id="5_q8r6a"]
 [ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="5_ryrav"]
 
@@ -67,7 +67,10 @@ position = Vector2(589, 539)
 position = Vector2(576, 325)
 scale = Vector2(6.82229, 9.6519)
 
-[node name="Spawnpoint" type="Marker2D" parent="."]
+[node name="Spawnright" type="Marker2D" parent="."]
 position = Vector2(1137, 540)
+
+[node name="Spawnup" type="Marker2D" parent="."]
+position = Vector2(577, 39)
 
 [connection signal="pressed" from="reset" to="." method="_on_reset_pressed"]

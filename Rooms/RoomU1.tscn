@@ -1,0 +1,88 @@
+[gd_scene load_steps=11 format=3 uid="uid://cxphfmjbbvvmn"]
+
+[ext_resource type="Script" uid="uid://cyysyxqikko7e" path="res://Rooms/room_U1.gd" id="1_hkgax"]
+[ext_resource type="Texture2D" uid="uid://begsf3r5rvnmu" path="res://Textures/dungeon_background.png" id="1_sqhwe"]
+[ext_resource type="Texture2D" uid="uid://bvw56lc5sjmna" path="res://Textures/dungeon_wall_long.jpg" id="2_hkgax"]
+[ext_resource type="PackedScene" uid="uid://bt1y1u8tsrjn1" path="res://player.tscn" id="3_fbr1q"]
+[ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="5_68m83"]
+[ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="6_xh8qj"]
+[ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="7_50mr8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fbr1q"]
+size = Vector2(119, 58)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lstjg"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ypmlf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="RoomU1" type="Node2D"]
+script = ExtResource("1_hkgax")
+
+[node name="floor" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="floor"]
+offset_right = 1151.0
+offset_bottom = 650.0
+scale = Vector2(1.00078, 0.997254)
+texture = ExtResource("1_sqhwe")
+
+[node name="TextureRect2" type="TextureRect" parent="floor"]
+offset_top = 592.0
+offset_right = 525.0
+offset_bottom = 646.0
+scale = Vector2(0.984577, 1.02761)
+texture = ExtResource("2_hkgax")
+
+[node name="TextureRect3" type="TextureRect" parent="floor"]
+offset_left = 632.0
+offset_top = 592.0
+offset_right = 1157.0
+offset_bottom = 646.0
+scale = Vector2(0.98998, 1.04)
+texture = ExtResource("2_hkgax")
+flip_h = true
+
+[node name="Player" parent="floor" instance=ExtResource("3_fbr1q")]
+position = Vector2(580, 618)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(576.5, 677)
+shape = SubResource("RectangleShape2D_fbr1q")
+
+[node name="pause_button" parent="." instance=ExtResource("5_68m83")]
+offset_left = 1107.0
+offset_top = 9.0
+offset_right = 1107.0
+offset_bottom = 9.0
+
+[node name="Pause_menu" parent="." instance=ExtResource("6_xh8qj")]
+visible = false
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 545.0
+offset_top = 284.0
+offset_right = 545.0
+offset_bottom = 284.0
+scale = Vector2(0.960175, 1.01674)
+size_flags_vertical = 4
+
+[node name="reset" type="Button" parent="."]
+offset_left = 1048.0
+offset_top = 11.0
+offset_right = 1848.0
+offset_bottom = 811.0
+scale = Vector2(0.0428735, 0.0405039)
+theme_override_styles/hover = SubResource("StyleBoxFlat_lstjg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ypmlf")
+icon = ExtResource("7_50mr8")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="pressed" from="reset" to="." method="_on_reset_pressed"]

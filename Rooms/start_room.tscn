@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cgecforh33lgp"]
+[gd_scene load_steps=9 format=3 uid="uid://cgecforh33lgp"]
 
 [ext_resource type="Texture2D" uid="uid://begsf3r5rvnmu" path="res://Textures/dungeon_background.png" id="1_xehqc"]
 [ext_resource type="Texture2D" uid="uid://b5w5ufk2q7x6i" path="res://Textures/dungeon_wall.jpg" id="2_i7s6n"]
@@ -10,13 +10,21 @@ script/source = "extends Node2D
 
 func _on_scene_transition_body_entered(body: Node2D) -> void:
 	if body.name == \"Player\":
-		get_tree().change_scene_to_file(\"res://RoomR1/RoomR1.tscn\")
+		get_tree().change_scene_to_file(\"res://Rooms/RoomR1.tscn\")
+
+
+func _on_scene_tran_up_body_entered(body: Node2D) -> void:
+	if body.name == \"Player\":
+		get_tree().change_scene_to_file(\"res://Rooms/RoomU1.tscn\")
 "
 
 [sub_resource type="GDScript" id="GDScript_rkvpa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_krux0"]
 size = Vector2(58.9737, 88.2372)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0m72j"]
+size = Vector2(86.5937, 47.9154)
 
 [node name="Background" type="Node2D"]
 scale = Vector2(1.23784, 1.24664)
@@ -113,6 +121,7 @@ offset_bottom = 332.124
 rotation = 4.71238
 scale = Vector2(0.490198, 0.48457)
 texture = ExtResource("2_i7s6n")
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect3" type="TextureRect" parent="wall"]
 offset_left = 185.825
@@ -122,6 +131,7 @@ offset_bottom = 332.119
 rotation = 4.71238
 scale = Vector2(0.490198, 0.48457)
 texture = ExtResource("2_i7s6n")
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect4" type="TextureRect" parent="wall"]
 offset_left = 280.333
@@ -131,6 +141,7 @@ offset_bottom = 332.921
 rotation = 4.71238
 scale = Vector2(0.490198, 0.48457)
 texture = ExtResource("2_i7s6n")
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect5" type="TextureRect" parent="wall"]
 offset_left = 420.748
@@ -140,6 +151,7 @@ offset_bottom = 287.994
 rotation = 1.57079
 scale = Vector2(0.490198, 0.48457)
 texture = ExtResource("2_i7s6n")
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect7" type="TextureRect" parent="wall"]
 offset_left = 651.942
@@ -150,6 +162,7 @@ rotation = 4.71238
 scale = Vector2(0.490198, 0.48457)
 texture = ExtResource("2_i7s6n")
 flip_v = true
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect12" type="TextureRect" parent="wall"]
 offset_left = 790.865
@@ -189,6 +202,7 @@ offset_bottom = 332.119
 rotation = 4.71238
 scale = Vector2(0.490198, 0.48457)
 texture = ExtResource("2_i7s6n")
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect13" type="TextureRect" parent="wall"]
 offset_left = 930.406
@@ -208,6 +222,7 @@ offset_bottom = 332.124
 rotation = 4.71238
 scale = Vector2(0.490198, 0.48457)
 texture = ExtResource("2_i7s6n")
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect18" type="TextureRect" parent="wall"]
 offset_left = 791.742
@@ -232,13 +247,20 @@ texture = ExtResource("3_xehqc")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(1.61572, 3.20862, 422.51, 1.60431, 420.087, 42.5143, 231.048, 44.1186, 233.471, 174.068, 559.846, 173.266, 558.23, 216.582, 138.952, 220.593, 136.528, 170.859, 185.808, 170.859, 185.808, 44.9207, 46.8558, 44.9207, 50.8951, 471.668, 927.422, 476.481, 992.859, 476.481, 992.859, 385.837, 143.799, 390.65, 141.375, 343.323, 887.029, 348.136, 885.413, 214.176, 651.942, 216.582, 649.518, 168.453, 791.702, 170.859, 789.278, 44.9207, 509.759, 48.9315, 511.375, -3.20862, 932.269, 0.802156, 932.269, 344.927, 1046.98, 344.927, 1051.02, 524.61, -0.807859, 520.599)
 
-[node name="SceneTransition" type="Area2D" parent="."]
+[node name="SceneTranRight" type="Area2D" parent="."]
 collision_layer = 3
 script = SubResource("GDScript_rkvpa")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTransition"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTranRight"]
 position = Vector2(961.756, 431.56)
 shape = SubResource("RectangleShape2D_krux0")
 
-[connection signal="area_entered" from="SceneTransition" to="SceneTransition" method="_on_area_entered"]
-[connection signal="body_entered" from="SceneTransition" to="." method="_on_scene_transition_body_entered"]
+[node name="SceneTranUp" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneTranUp"]
+position = Vector2(466.462, -22.5674)
+shape = SubResource("RectangleShape2D_0m72j")
+
+[connection signal="area_entered" from="SceneTranRight" to="SceneTranRight" method="_on_area_entered"]
+[connection signal="body_entered" from="SceneTranRight" to="." method="_on_scene_transition_body_entered"]
+[connection signal="body_entered" from="SceneTranUp" to="." method="_on_scene_tran_up_body_entered"]
