@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cgecforh33lgp" path="res://Rooms/start_room.tscn" id="4_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://bt1y1u8tsrjn1" path="res://player.tscn" id="5_q8r6a"]
 [ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="5_ryrav"]
-[ext_resource type="PackedScene" uid="uid://b07rm87uuffyj" path="res://inventory/items/coin.tscn" id="7_eow3j"]
+[ext_resource type="PackedScene" uid="uid://lj75ulh8mvmu" path="res://inventory/items/coin.tscn" id="7_eow3j"]
 
 [sub_resource type="TileSet" id="TileSet_lhf7i"]
 
@@ -26,14 +26,22 @@ tile_set = SubResource("TileSet_lhf7i")
 format = 2
 
 [node name="Background" parent="." instance=ExtResource("4_fc0e3")]
+texture_filter = 1
 position = Vector2(4.76837e-07, 0)
 
 [node name="Node2D" type="Node2D" parent="."]
 
+[node name="Player" parent="." instance=ExtResource("5_q8r6a")]
+process_mode = 1
+texture_filter = 1
+position = Vector2(583, 542)
+collision_layer = 3
+collision_priority = 1.0
+
 [node name="Pause_menu" parent="." instance=ExtResource("2_feb5d")]
 process_mode = 2
 visible = false
-z_index = 1
+z_index = 2
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -62,11 +70,6 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ryrav")
 theme_override_styles/normal = SubResource("StyleBoxFlat_eow3j")
 icon = ExtResource("5_ryrav")
 
-[node name="Player" parent="." instance=ExtResource("5_q8r6a")]
-process_mode = 1
-texture_filter = 1
-position = Vector2(589, 539)
-
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 325)
 scale = Vector2(6.82229, 9.6519)
@@ -77,7 +80,16 @@ position = Vector2(1137, 540)
 [node name="Spawnup" type="Marker2D" parent="."]
 position = Vector2(577, 39)
 
-[node name="Coin" parent="." instance=ExtResource("7_eow3j")]
-position = Vector2(465, 540)
+[node name="coin" parent="." instance=ExtResource("7_eow3j")]
+position = Vector2(830, 347)
+
+[node name="coin2" parent="." instance=ExtResource("7_eow3j")]
+position = Vector2(786, 387)
+
+[node name="coin3" parent="." instance=ExtResource("7_eow3j")]
+position = Vector2(782, 346)
+
+[node name="coin4" parent="." instance=ExtResource("7_eow3j")]
+position = Vector2(499, 536)
 
 [connection signal="pressed" from="reset" to="." method="_on_reset_pressed"]

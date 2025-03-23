@@ -1,11 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://b07rm87uuffyj"]
+[gd_scene load_steps=18 format=3 uid="uid://lj75ulh8mvmu"]
 
 [ext_resource type="Script" uid="uid://31dmjlntkvw4" path="res://inventory/items/coin.gd" id="1_aw2c0"]
 [ext_resource type="Texture2D" uid="uid://8ang45v51xs3" path="res://inventory/itemTextures/coin.png" id="1_k1sus"]
 [ext_resource type="Resource" uid="uid://dnjdn5itq2dkc" path="res://inventory/items/coin.tres" id="2_l3tnp"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_aw2c0"]
-radius = 15.0333
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l3tnp"]
 atlas = ExtResource("1_k1sus")
@@ -99,17 +96,22 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Coin" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_o1rs2"]
+radius = 19.0263
+
+[node name="coin" type="StaticBody2D"]
 script = ExtResource("1_aw2c0")
 item = ExtResource("2_l3tnp")
-
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("CircleShape2D_aw2c0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 scale = Vector2(2.5, 2.5)
 sprite_frames = SubResource("SpriteFrames_6cuun")
 autoplay = "default"
+
+[node name="interactable_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable_area"]
+shape = SubResource("CircleShape2D_o1rs2")
+
+[connection signal="body_entered" from="interactable_area" to="." method="_on_interactable_area_body_entered"]
