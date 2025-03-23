@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bx52rofse4avo"]
+[gd_scene load_steps=14 format=3 uid="uid://bx52rofse4avo"]
 
 [ext_resource type="Script" uid="uid://dfi72jwor0g8s" path="res://game.gd" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="2_feb5d"]
@@ -6,8 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://cgecforh33lgp" path="res://Rooms/start_room.tscn" id="4_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://bt1y1u8tsrjn1" path="res://player.tscn" id="5_q8r6a"]
 [ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="5_ryrav"]
-[ext_resource type="PackedScene" uid="uid://pbfs7yf0vfwt" path="res://sword.tscn" id="7_j5wjh"]
-[ext_resource type="PackedScene" uid="uid://drhlppkgxxobf" path="res://Chest.tscn" id="8_vef74"]
+[ext_resource type="PackedScene" uid="uid://lj75ulh8mvmu" path="res://inventory/items/coin.tscn" id="7_eow3j"]
+[ext_resource type="PackedScene" path="res://sword.tscn" id="7_j5wjh"]
+[ext_resource type="PackedScene" path="res://Chest.tscn" id="8_vef74"]
 [ext_resource type="Texture2D" uid="uid://63qde4cdv7f" path="res://Icons/floppy-disc-storage-svgrepo-com.svg" id="9_vef74"]
 
 [sub_resource type="TileSet" id="TileSet_lhf7i"]
@@ -35,7 +36,7 @@ position = Vector2(4.76837e-07, 0)
 [node name="Pause_menu" parent="." instance=ExtResource("2_feb5d")]
 process_mode = 2
 visible = false
-z_index = 1
+z_index = 2
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -79,15 +80,18 @@ position = Vector2(1137, 540)
 position = Vector2(577, 39)
 
 [node name="Sword" parent="." instance=ExtResource("7_j5wjh")]
+texture_filter = 1
 position = Vector2(145, 113)
 rotation = -0.385102
 scale = Vector2(1.22879, 1.22879)
 
 [node name="Chest2" parent="." instance=ExtResource("8_vef74")]
+texture_filter = 1
 position = Vector2(1057, 413)
 scale = Vector2(1.89925, 2.58461)
 
 [node name="Chest" parent="." instance=ExtResource("8_vef74")]
+texture_filter = 1
 position = Vector2(310, 90)
 scale = Vector2(1.61804, 2.96498)
 
@@ -97,6 +101,24 @@ offset_top = 9.0
 offset_right = 1030.0
 offset_bottom = 49.0
 texture_normal = ExtResource("9_vef74")
+
+[node name="coin" parent="." instance=ExtResource("7_eow3j")]
+position = Vector2(457, 536)
+
+[node name="coin2" parent="." instance=ExtResource("7_eow3j")]
+position = Vector2(976, 379)
+
+[node name="coin3" parent="." instance=ExtResource("7_eow3j")]
+position = Vector2(939, 398)
+
+[node name="coin4" parent="." instance=ExtResource("7_eow3j")]
+position = Vector2(334, 156)
+
+[node name="coin5" parent="." instance=ExtResource("7_eow3j")]
+position = Vector2(370, 146)
+
+[node name="coin6" parent="." instance=ExtResource("7_eow3j")]
+position = Vector2(115, 362)
 
 [connection signal="pressed" from="reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="saveicon" to="." method="_on_save_icon_pressed"]

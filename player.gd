@@ -2,6 +2,11 @@ extends CharacterBody2D
 
 const SPEED = 300.0
 
+@export var inv: Inv
+
+func _ready():
+	add_to_group("player")
+
 func _physics_process(delta):
 	var direction = Vector2.ZERO
 	var directionHori = Input.get_axis("ui_left", "ui_right")
@@ -22,3 +27,7 @@ func _physics_process(delta):
 
 	velocity = direction * SPEED
 	move_and_slide()
+
+
+func collect(item):
+	inv.insert(item)
