@@ -1,13 +1,15 @@
 extends Node2D
 
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		GameState.previous_room = "RoomR1"
+		get_tree().change_scene_to_file("res://game.tscn")
+		
+var paused = false
 @onready var pause_button = $pause_button
 @onready var Pause_menu = $Pause_menu
-var paused = false
 
-func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("paused"):
-		pauseMenu()
-		
 func pauseMenu():
 	if paused:
 		Pause_menu.hide()
@@ -19,14 +21,7 @@ func pauseMenu():
 		pause_button.show_pause()
 		get_tree().paused == true
 	paused = !paused
-	
-	
 
-func _ready():
-	if GameState.previous_room == "RoomR1":
-		var player = $Player
-		var spawn = $Spawnpoint
-		player.global_position = spawn.global_position
 
 func _on_reset_pressed() -> void:
 	get_tree().reload_current_scene()
