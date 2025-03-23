@@ -1,10 +1,11 @@
 [gd_scene load_steps=4 format=3 uid="uid://c65da2b44ojeu"]
 
 [ext_resource type="Script" uid="uid://3ms6722wt1mo" path="res://inventory/inv_ui.gd" id="1_f2u1w"]
-[ext_resource type="Texture2D" uid="uid://cxjjte6haw2x" path="res://inventory/inventory-background.png" id="2_w82yi"]
+[ext_resource type="Texture2D" uid="uid://cxjjte6haw2x" path="res://inventory/itemTextures/inventory-background.png" id="2_w82yi"]
 [ext_resource type="PackedScene" uid="uid://byipbmc60ot6c" path="res://inventory/inv_ui_slot.tscn" id="3_dn3an"]
 
 [node name="Inv_UI" type="Control"]
+texture_filter = 1
 custom_minimum_size = Vector2(86, 62)
 layout_mode = 3
 anchors_preset = 0

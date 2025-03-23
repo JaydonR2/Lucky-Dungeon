@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bx52rofse4avo"]
+[gd_scene load_steps=11 format=3 uid="uid://bx52rofse4avo"]
 
 [ext_resource type="Script" uid="uid://dfi72jwor0g8s" path="res://game.gd" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="2_feb5d"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cgecforh33lgp" path="res://Rooms/start_room.tscn" id="4_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://bt1y1u8tsrjn1" path="res://player.tscn" id="5_q8r6a"]
 [ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="5_ryrav"]
+[ext_resource type="PackedScene" uid="uid://b07rm87uuffyj" path="res://inventory/items/coin.tscn" id="7_eow3j"]
 
 [sub_resource type="TileSet" id="TileSet_lhf7i"]
 
@@ -63,6 +64,7 @@ icon = ExtResource("5_ryrav")
 
 [node name="Player" parent="." instance=ExtResource("5_q8r6a")]
 process_mode = 1
+texture_filter = 1
 position = Vector2(589, 539)
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -74,5 +76,8 @@ position = Vector2(1137, 540)
 
 [node name="Spawnup" type="Marker2D" parent="."]
 position = Vector2(577, 39)
+
+[node name="Coin" parent="." instance=ExtResource("7_eow3j")]
+position = Vector2(465, 540)
 
 [connection signal="pressed" from="reset" to="." method="_on_reset_pressed"]

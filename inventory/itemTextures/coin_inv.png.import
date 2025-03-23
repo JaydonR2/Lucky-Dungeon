@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxjjte6haw2x"
-path="res://.godot/imported/inventory-background.png-cb707d2e71e0b9bedde45dc70d6b1025.ctex"
+uid="uid://csudlfuhygdyj"
+path="res://.godot/imported/coin_inv.png-d50d29b5be77c046b7d52726a913b63d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://inventory/inventory-background.png"
-dest_files=["res://.godot/imported/inventory-background.png-cb707d2e71e0b9bedde45dc70d6b1025.ctex"]
+source_file="res://inventory/itemTextures/coin_inv.png"
+dest_files=["res://.godot/imported/coin_inv.png-d50d29b5be77c046b7d52726a913b63d.ctex"]
 
 [params]
 

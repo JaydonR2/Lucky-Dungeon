@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://byipbmc60ot6c"]
 
-[ext_resource type="Texture2D" uid="uid://b5ttx0rsgxft0" path="res://inventory/inventory-slot.png" id="1_dfngl"]
+[ext_resource type="Texture2D" uid="uid://b5ttx0rsgxft0" path="res://inventory/itemTextures/inventory-slot.png" id="1_dfngl"]
 [ext_resource type="Script" uid="uid://bwf1lb1bfyhdt" path="res://inventory/inv_ui_slot.gd" id="1_fcwim"]
 
 [node name="inv_UI_slot" type="Panel"]
@@ -11,6 +11,7 @@ offset_bottom = 16.0
 script = ExtResource("1_fcwim")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 texture = ExtResource("1_dfngl")
 centered = false
 
