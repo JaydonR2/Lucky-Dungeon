@@ -21,9 +21,16 @@ func pauseMenu():
 	paused = !paused
 	
 	
+
+
 func _ready():
-	print("Game is ready. Player exists?", has_node("Player"))
-		
+	var player = $Player
+	if GameState.previous_room == "RoomR1":
+		var spawn = $Spawnright
+		player.global_position = spawn.global_position
+	if GameState.previous_room == "RoomU1":
+		var spawn = $Spawnup
+		player.global_position = spawn.global_position
 func save_game():
 	print("Saving...")
 	var player = get_node_or_null("Player")
@@ -41,15 +48,6 @@ func save_game():
 			print("❌ Save failed to open file.")
 	else:
 		print("❌ Player not found in save_game().")
-
-func _ready():
-	var player = $Player
-	if GameState.previous_room == "RoomR1":
-		var spawn = $Spawnright
-		player.global_position = spawn.global_position
-	if GameState.previous_room == "RoomU1":
-		var spawn = $Spawnup
-		player.global_position = spawn.global_position
 
 func load_game():
 	if FileAccess.file_exists("user://save_game.save"):
