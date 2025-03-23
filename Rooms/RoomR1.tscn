@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://b3g5a0hns4gg4"]
+[gd_scene load_steps=13 format=3 uid="uid://b3g5a0hns4gg4"]
 
 [ext_resource type="Texture2D" uid="uid://begsf3r5rvnmu" path="res://Textures/dungeon_background.png" id="1_4h44c"]
 [ext_resource type="Script" uid="uid://dhdv5wc865kox" path="res://Rooms/room_R1.gd" id="1_kovff"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="6_01wad"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="7_2r801"]
 [ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="8_3jk76"]
+[ext_resource type="PackedScene" uid="uid://lj75ulh8mvmu" path="res://inventory/items/coin.tscn" id="9_xmgjn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4h44c"]
 size = Vector2(55, 98)
@@ -197,6 +198,15 @@ scale = Vector2(0.0428735, 0.0405039)
 theme_override_styles/hover = SubResource("StyleBoxFlat_h6fkv")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ovh4k")
 icon = ExtResource("8_3jk76")
+
+[node name="coin" parent="." instance=ExtResource("9_xmgjn")]
+position = Vector2(316, 331)
+
+[node name="coin2" parent="." instance=ExtResource("9_xmgjn")]
+position = Vector2(295, 365)
+
+[node name="coin3" parent="." instance=ExtResource("9_xmgjn")]
+position = Vector2(331, 361)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="pressed" from="reset" to="." method="_on_reset_pressed"]
