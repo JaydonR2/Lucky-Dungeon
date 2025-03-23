@@ -1,4 +1,4 @@
-extends Area2D
+extends Node2D
 
 var is_open = false
 @export var loot: Array[String] = ["Gold", "Potion"]
