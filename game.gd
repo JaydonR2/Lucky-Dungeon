@@ -4,6 +4,7 @@ extends Node2D
 @onready var Pause_menu = $Pause_menu
 var paused = false
 
+
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("paused"):
 		pauseMenu()
@@ -20,8 +21,6 @@ func pauseMenu():
 		get_tree().paused = true
 	paused = !paused
 	
-	
-
 
 func _ready():
 	var player = $Player
@@ -31,6 +30,9 @@ func _ready():
 	if GameState.previous_room == "RoomU1":
 		var spawn = $Spawnup
 		player.global_position = spawn.global_position
+	var health = $Health
+	health.update_health()
+	
 func save_game():
 	print("Saving...")
 	var player = get_node_or_null("Player")

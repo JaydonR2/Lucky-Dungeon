@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://cxphfmjbbvvmn"]
+[gd_scene load_steps=13 format=3 uid="uid://cxphfmjbbvvmn"]
 
 [ext_resource type="Script" uid="uid://cyysyxqikko7e" path="res://Rooms/room_U1.gd" id="1_hkgax"]
 [ext_resource type="Texture2D" uid="uid://begsf3r5rvnmu" path="res://Textures/dungeon_background.png" id="1_sqhwe"]
 [ext_resource type="Texture2D" uid="uid://bvw56lc5sjmna" path="res://Textures/dungeon_wall_long.jpg" id="2_hkgax"]
 [ext_resource type="PackedScene" uid="uid://bt1y1u8tsrjn1" path="res://player.tscn" id="3_fbr1q"]
 [ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="5_68m83"]
+[ext_resource type="PackedScene" uid="uid://dqu0wjqn8hj7b" path="res://health.tscn" id="6_50mr8"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="6_xh8qj"]
 [ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="7_50mr8"]
 [ext_resource type="PackedScene" uid="uid://lj75ulh8mvmu" path="res://inventory/items/coin.tscn" id="8_xh8qj"]
@@ -59,6 +60,9 @@ offset_left = 1107.0
 offset_top = 9.0
 offset_right = 1107.0
 offset_bottom = 9.0
+
+[node name="Health" parent="." instance=ExtResource("6_50mr8")]
+position = Vector2(66, 50)
 
 [node name="Pause_menu" parent="." instance=ExtResource("6_xh8qj")]
 visible = false
