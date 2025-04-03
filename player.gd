@@ -3,9 +3,11 @@ extends CharacterBody2D
 const SPEED = 300.0
 
 @export var inv: Inv
+@onready var health = %Health
 
 func _ready():
 	add_to_group("player")
+	
 
 func _physics_process(delta):
 	var direction = Vector2.ZERO
@@ -28,6 +30,19 @@ func _physics_process(delta):
 	velocity = direction * SPEED
 	move_and_slide()
 
+func DecreaseHealth():
+	PlayerHealth.health_tracker = PlayerHealth.health_tracker - 0.5
+	health.update_health()
+	
+func UpdateHealth():
+	health.update_health()
 
 func collect(item):
 	inv.insert(item)
+
+#game health test
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	DecreaseHealth()
+# roomR1 health test
+func _on_area_2d_2_body_entered(body: Node2D) -> void:
+	DecreaseHealth()

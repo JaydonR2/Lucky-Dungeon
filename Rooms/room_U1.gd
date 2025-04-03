@@ -1,5 +1,8 @@
 extends Node2D
 
+func _ready():
+	var health = $Health
+	health.update_health()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":

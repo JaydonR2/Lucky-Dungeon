@@ -1,0 +1,40 @@
+[gd_scene load_steps=9 format=3 uid="uid://dqu0wjqn8hj7b"]
+
+[ext_resource type="Script" uid="uid://bl1abi7gcph70" path="res://health.gd" id="1_0clki"]
+[ext_resource type="Texture2D" uid="uid://b5lb0h0srvvga" path="res://Textures/hearts/3.png" id="1_bydfv"]
+[ext_resource type="Texture2D" uid="uid://b7b8e68eqkl64" path="res://Textures/hearts/2.5.png" id="2_7e838"]
+[ext_resource type="Texture2D" uid="uid://cjhivhj7b56et" path="res://Textures/hearts/2.png" id="4_lshwv"]
+[ext_resource type="Texture2D" uid="uid://c8umwq1ykhiiu" path="res://Textures/hearts/1.5.png" id="5_h1ndf"]
+[ext_resource type="Texture2D" uid="uid://dmqtwoj6lol4x" path="res://Textures/hearts/1.png" id="6_bgv18"]
+[ext_resource type="Texture2D" uid="uid://dla1jbnk0114v" path="res://Textures/hearts/0.5.png" id="7_mlnxt"]
+[ext_resource type="Texture2D" uid="uid://ca0ro5fli0gd2" path="res://Textures/hearts/0.png" id="8_0xhvp"]
+
+[node name="Health" type="Node2D"]
+script = ExtResource("1_0clki")
+
+[node name="3_hearts" type="Sprite2D" parent="."]
+texture = ExtResource("1_bydfv")
+
+[node name="2_5_hearts" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_7e838")
+
+[node name="2_hearts" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_lshwv")
+
+[node name="1_5_hearts" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_h1ndf")
+
+[node name="1_hearts" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("6_bgv18")
+
+[node name="0_5_hearts" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("7_mlnxt")
+
+[node name="0_hearts" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("8_0xhvp")

@@ -1,5 +1,8 @@
 extends Node2D
 
+func _ready():
+	var health = $Health
+	health.update_health()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
@@ -8,7 +11,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _change_scene():
 	get_tree().change_scene_to_file("res://game.tscn")
-		
+
+	
 var paused = false
 @onready var pause_button = $pause_button
 @onready var Pause_menu = $Pause_menu
