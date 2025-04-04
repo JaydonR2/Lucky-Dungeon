@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dqu0wjqn8hj7b"]
+[gd_scene load_steps=10 format=3 uid="uid://dqu0wjqn8hj7b"]
 
 [ext_resource type="Script" uid="uid://bl1abi7gcph70" path="res://health.gd" id="1_0clki"]
 [ext_resource type="Texture2D" uid="uid://b5lb0h0srvvga" path="res://Textures/hearts/3.png" id="1_bydfv"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dmqtwoj6lol4x" path="res://Textures/hearts/1.png" id="6_bgv18"]
 [ext_resource type="Texture2D" uid="uid://dla1jbnk0114v" path="res://Textures/hearts/0.5.png" id="7_mlnxt"]
 [ext_resource type="Texture2D" uid="uid://ca0ro5fli0gd2" path="res://Textures/hearts/0.png" id="8_0xhvp"]
+[ext_resource type="Theme" uid="uid://b7ragqt51e283" path="res://button_theme.tres" id="9_lshwv"]
 
 [node name="Health" type="Node2D"]
 script = ExtResource("1_0clki")
@@ -38,3 +39,54 @@ texture = ExtResource("7_mlnxt")
 [node name="0_hearts" type="Sprite2D" parent="."]
 visible = false
 texture = ExtResource("8_0xhvp")
+
+[node name="DeathScreen" type="Control" parent="."]
+process_mode = 2
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="DeathScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 433.0
+offset_top = 217.0
+offset_right = 492.0
+offset_bottom = 313.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.77638, 1.42461)
+theme = ExtResource("9_lshwv")
+
+[node name="MarginContainer" type="MarginContainer" parent="DeathScreen/Panel"]
+layout_mode = 0
+offset_left = -3.94063
+offset_top = -0.701948
+offset_right = 80.0594
+offset_bottom = 91.298
+scale = Vector2(0.831059, 1)
+theme = ExtResource("9_lshwv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="DeathScreen/Panel/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("9_lshwv")
+alignment = 1
+
+[node name="Label" type="Label" parent="DeathScreen/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("9_lshwv")
+text = "You Died"
+horizontal_alignment = 1
+
+[node name="Quit" type="Button" parent="DeathScreen/Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("9_lshwv")
+text = "Main Menu"
+
+[connection signal="pressed" from="DeathScreen/Panel/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

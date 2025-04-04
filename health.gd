@@ -1,4 +1,12 @@
 extends Node2D
+@onready var main = $"../"
+
+func _on_quit_pressed() -> void:
+	main.get_tree().paused = false
+	PlayerHealth.health_tracker = 3.0
+	update_health()
+	$DeathScreen.hide()
+	get_tree().change_scene_to_file("res://menu/menu.tscn")
 
 func update_health():
 	$"0_hearts".hide()
@@ -11,6 +19,8 @@ func update_health():
 	match PlayerHealth.health_tracker:
 		0.0:
 			$"0_hearts".show()
+			main.get_tree().paused = true
+			$DeathScreen.show()
 		0.5:
 			$"0_5_hearts".show()
 		1.0:
