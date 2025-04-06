@@ -1,18 +1,30 @@
-[gd_scene load_steps=7 format=3 uid="uid://bt1y1u8tsrjn1"]
+[gd_scene load_steps=10 format=3 uid="uid://bt1y1u8tsrjn1"]
 
 [ext_resource type="Script" uid="uid://dat8uexpp7jml" path="res://player.gd" id="1_bdpxd"]
 [ext_resource type="Resource" uid="uid://d3kmew1hl50cy" path="res://inventory/playerinv.tres" id="2_hqtel"]
 [ext_resource type="Texture2D" uid="uid://ch4omcpchcorc" path="res://Player_sprite.png" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://6kwd2caqdaoy" path="res://Idle-Sheet 2.png" id="4_1jxqw"]
 [ext_resource type="PackedScene" uid="uid://c65da2b44ojeu" path="res://inventory/inv_ui.tscn" id="4_sweqy"]
+[ext_resource type="Texture2D" uid="uid://dbifdkd0qey1b" path="res://Idle-Sheet 3.png" id="5_dw050"]
+[ext_resource type="Texture2D" uid="uid://bl83qn0wb22e" path="res://Idle-Sheet 4.png" id="6_b26j0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ospa4"]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_onrkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1jxqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dw050")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_b26j0")
 }],
 "loop": true,
-"name": &"new_animation",
+"name": &"idle",
 "speed": 5.0
 }]
 
@@ -32,7 +44,9 @@ inv = ExtResource("2_hqtel")
 position = Vector2(-1, -2)
 scale = Vector2(0.508304, 0.565658)
 sprite_frames = SubResource("SpriteFrames_ospa4")
-animation = &"new_animation"
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.115421
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.880092, -1.46188)
