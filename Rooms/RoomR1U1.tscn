@@ -211,14 +211,14 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ml6bw")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rmv7b")
 icon = ExtResource("9_hdjkt")
 
+[node name="Health" parent="." instance=ExtResource("7_obyre")]
+unique_name_in_owner = true
+position = Vector2(64, 41)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PackedVector2Array(0, -3, -1, 51, 167, 48, 170, 485, 750, 491, 748, 272, 921, 271, 921, 215, 404, 216, 404, 272, 687, 272, 688, 431, 233, 428, 233, 51, 1097, 56, 1097, 428, 921, 429, 918, 488, 1094, 486, 1097, 596, 975, 592, 977, 706, 867, 706, 862, 595, 56, 595, 56, 163, -15, 163, -78, 158, -72, 53, -3, 51, -72, 19, -122, 158, -3, 649, 799, 647, 807, 753, 1044, 761, 1032, 647, 1155, 652, 1155, -1)
-
-[node name="Health" parent="." instance=ExtResource("7_obyre")]
-unique_name_in_owner = true
-position = Vector2(64, 41)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]

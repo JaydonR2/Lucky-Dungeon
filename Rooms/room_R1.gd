@@ -8,6 +8,9 @@ func _ready():
 	if GameState.previous_room == "StartRoom":
 		var spawn = $SpawnStart
 		player.global_position = spawn.global_position
+	if GameState.previous_room == "RoomR2":
+		var spawn = $SpawnR2
+		player.global_position = spawn.global_position
 	var health = $Health
 	health.update_health()
 
@@ -27,6 +30,15 @@ func _on_area_2d_3_body_entered(body: Node2D) -> void:
 	
 func _change_sceneR1U1():
 	get_tree().change_scene_to_file("res://Rooms/RoomR1U1.tscn")
+	
+
+func _on_area_2d_4_body_entered(body: Node2D) -> void:
+	if body.name == "Player":
+		GameState.previous_room = "RoomR1"
+		call_deferred("_change_sceneR2")
+
+func _change_sceneR2():
+	get_tree().change_scene_to_file("res://Rooms/RoomR2.tscn")
 
 var paused = false
 @onready var pause_button = $pause_button
