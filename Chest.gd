@@ -9,6 +9,7 @@ func give_loot(player):
 
 
 func _on_hitbox_body_entered(body):
-	is_open = true
-	$AnimatedSprite2D.play("open")  # Play chest opening animation
-	#give_loot(body)
+	if (is_open == false):
+		is_open = true
+		$AnimatedSprite2D.play("open")  # Play chest opening animation
+		#give_loot(body)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://drhlppkgxxobf"]
+[gd_scene load_steps=14 format=3 uid="uid://drhlppkgxxobf"]
 
 [ext_resource type="Script" uid="uid://c6242qmptysl7" path="res://Chest.gd" id="1_5udua"]
 [ext_resource type="Texture2D" uid="uid://clc8yh1c2mpnb" path="res://Chests idle 1.png" id="2_g7fd0"]
@@ -54,11 +54,13 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g6mye"]
 size = Vector2(28.6162, 22.2298)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lkwns"]
+size = Vector2(20.5, 10.5)
+
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_5udua")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-y_sort_enabled = true
 position = Vector2(4.39692, -3)
 scale = Vector2(1.02062, 0.719756)
 sprite_frames = SubResource("SpriteFrames_tturf")
@@ -72,5 +74,11 @@ collision_mask = 4
 position = Vector2(4.39692, -3)
 scale = Vector2(1.02062, 0.719756)
 shape = SubResource("RectangleShape2D_g6mye")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(4, -3)
+shape = SubResource("RectangleShape2D_lkwns")
 
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
