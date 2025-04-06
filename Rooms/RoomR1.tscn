@@ -171,9 +171,11 @@ shape = SubResource("RectangleShape2D_4h44c")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
 polygon = PackedVector2Array(0, 0, 511.044, 1.18435, 564.926, 1.30923, 863, 2, 862, 53, 56, 53, 58, 480, -56, 483, -56, 594.552, 1150, 593, 1211, 595, 1208, 480, 1094, 483, 1095, 434, 1094, 266, 636, 271, 627, 214, 1095.28, 218.477, 1092.75, 51.823, 976, 54, 978, 1, 972, -48, 862, -43, 861, 2, 829, 2, 833, -69, 862, -68, 975, -67, 996, -67, 998, -1, 1092, 2, 1153, 3, 1150, 219, 1211, 430, 1243, 483, 1248, 590, 1251, 651, 1152, 648, -79, 644, -72.4468, 468.161, 2, 474)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
 polygon = PackedVector2Array(171, 214, 172, 485, 747, 489, 745, 429, 458, 429, 462, 218, 401, 219, 401, 429, 232, 428, 233, 214)
 
 [node name="pause_button" parent="." instance=ExtResource("6_01wad")]

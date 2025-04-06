@@ -46,5 +46,4 @@ func pauseMenu():
 
 
 func _on_reset_pressed() -> void:
-	GameState.previous_room = ""
 	get_tree().reload_current_scene()
