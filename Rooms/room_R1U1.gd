@@ -30,8 +30,10 @@ func _change_sceneRoomR1():
 	
 func _on_area_2d_3_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		get_tree().change_scene_to_file("res://Rooms/RoomBoss.tscn")
+		call_deferred("_change_sceneRoomBoss")
 
+func _change_sceneRoomBoss():
+	get_tree().change_scene_to_file("res://Rooms/RoomBoss.tscn")
 	
 var paused = false
 @onready var pause_button = $pause_button
