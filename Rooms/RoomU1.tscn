@@ -242,7 +242,7 @@ offset_right = 1107.0
 offset_bottom = 9.0
 
 [node name="Health" parent="." instance=ExtResource("6_50mr8")]
-position = Vector2(66, 50)
+position = Vector2(66, 45)
 
 [node name="Pause_menu" parent="." instance=ExtResource("6_xh8qj")]
 visible = false
@@ -272,6 +272,8 @@ icon = ExtResource("7_50mr8")
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(2, -1)
 polygon = PackedVector2Array(518, 2, -2, 1, -2, 648, 512, 648, 515, 590, 56, 592, 57, 54, 225, 57, 228, 215, 291, 216, 293, 55, 518, 55, 537, -61, 639, -56, 634, 57, 694, 55, 692, 382, 233, 379, 230, 489, 752, 493, 748, 54, 1225, 54, 1225, 165, 922, 162, 921, 484, 1093, 487, 1093, 590, 637, 590, 644, 727, 515, 720, 505, 661, 479, 719, 537, 766, 1265, 761, 1254, -4, 512, -102)
 
 [node name="coin" parent="." instance=ExtResource("8_xh8qj")]
@@ -299,7 +301,7 @@ position = Vector2(578, 128)
 position = Vector2(579, 608)
 
 [node name="SpawnR1U1" type="Marker2D" parent="."]
-position = Vector2(1101, 108)
+position = Vector2(1131, 110)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
