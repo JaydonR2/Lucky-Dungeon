@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bsko2oiy8gyff" path="res://Textures/dungeon_wallDark_long.jpg" id="3_13ewv"]
 [ext_resource type="Texture2D" uid="uid://d18243pf1s30d" path="res://Textures/dungeon_wallDark.jpg" id="4_nwcen"]
 [ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="6_4augu"]
-[ext_resource type="PackedScene" uid="uid://dqu0wjqn8hj7b" path="res://health.tscn" id="7_obyre"]
+[ext_resource type="PackedScene" path="res://health.tscn" id="7_obyre"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="8_67j5d"]
 [ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="9_hdjkt"]
 
@@ -35,7 +35,6 @@ texture = ExtResource("1_2lg5k")
 
 [node name="Player" parent="." instance=ExtResource("2_w7c1r")]
 position = Vector2(32, 119)
-scale = Vector2(3.53789, 3.70749)
 
 [node name="wall" type="Node2D" parent="."]
 
