@@ -8,10 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="5_ryrav"]
 [ext_resource type="PackedScene" uid="uid://dqu0wjqn8hj7b" path="res://health.tscn" id="6_mfdv2"]
 [ext_resource type="PackedScene" uid="uid://lj75ulh8mvmu" path="res://inventory/items/coin.tscn" id="7_eow3j"]
-[ext_resource type="PackedScene" path="res://sword.tscn" id="7_j5wjh"]
+[ext_resource type="PackedScene" uid="uid://pbfs7yf0vfwt" path="res://sword.tscn" id="7_j5wjh"]
 [ext_resource type="PackedScene" uid="uid://drhlppkgxxobf" path="res://Chest.tscn" id="8_vef74"]
 [ext_resource type="Texture2D" uid="uid://63qde4cdv7f" path="res://Icons/floppy-disc-storage-svgrepo-com.svg" id="9_vef74"]
-[ext_resource type="Script" uid="uid://dk8h1xwn2y45a" path="res://area_2d.gd" id="12_iotsf"]
+[ext_resource type="Script" path="res://area_2d.gd" id="12_iotsf"]
 [ext_resource type="Texture2D" uid="uid://cnjvxrxkbv1uj" path="res://Textures/skull.png" id="14_215e1"]
 
 [sub_resource type="TileSet" id="TileSet_lhf7i"]

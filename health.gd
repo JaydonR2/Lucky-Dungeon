@@ -20,6 +20,7 @@ func update_health():
 		0.0:
 			$"0_hearts".show()
 			main.get_tree().paused = true
+			GameState.previous_room = "";
 			$DeathScreen.show()
 		0.5:
 			$"0_5_hearts".show()

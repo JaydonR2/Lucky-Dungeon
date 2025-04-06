@@ -1,10 +1,12 @@
-[gd_scene load_steps=13 format=3 uid="uid://cxphfmjbbvvmn"]
+[gd_scene load_steps=16 format=3 uid="uid://cxphfmjbbvvmn"]
 
 [ext_resource type="Script" uid="uid://cyysyxqikko7e" path="res://Rooms/room_U1.gd" id="1_hkgax"]
 [ext_resource type="Texture2D" uid="uid://begsf3r5rvnmu" path="res://Textures/dungeon_background.png" id="1_sqhwe"]
 [ext_resource type="Texture2D" uid="uid://bvw56lc5sjmna" path="res://Textures/dungeon_wall_long.jpg" id="2_hkgax"]
 [ext_resource type="PackedScene" uid="uid://bt1y1u8tsrjn1" path="res://player.tscn" id="3_fbr1q"]
+[ext_resource type="Texture2D" uid="uid://b5w5ufk2q7x6i" path="res://Textures/dungeon_wall.jpg" id="4_lstjg"]
 [ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="5_68m83"]
+[ext_resource type="Texture2D" uid="uid://cn2eeojokhcdv" path="res://Textures/dungeon_wall_square.jpg" id="5_ypmlf"]
 [ext_resource type="PackedScene" uid="uid://dqu0wjqn8hj7b" path="res://health.tscn" id="6_50mr8"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="6_xh8qj"]
 [ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="7_50mr8"]
@@ -12,6 +14,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fbr1q"]
 size = Vector2(119, 58)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ypmlf"]
+size = Vector2(66, 109)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lstjg"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -30,14 +35,186 @@ offset_bottom = 650.0
 scale = Vector2(1.00078, 0.997254)
 texture = ExtResource("1_sqhwe")
 
-[node name="TextureRect2" type="TextureRect" parent="floor"]
+[node name="Player" parent="." instance=ExtResource("3_fbr1q")]
+position = Vector2(580, 618)
+
+[node name="wall" type="Node2D" parent="."]
+
+[node name="TextureRect18" type="TextureRect" parent="wall"]
+offset_left = 230.0
+offset_top = 432.0
+offset_right = 755.0
+offset_bottom = 486.0
+scale = Vector2(0.98998, 1.00383)
+texture = ExtResource("2_hkgax")
+
+[node name="TextureRect2" type="TextureRect" parent="wall"]
 offset_top = 592.0
 offset_right = 525.0
 offset_bottom = 646.0
 scale = Vector2(0.984577, 1.02761)
 texture = ExtResource("2_hkgax")
 
-[node name="TextureRect3" type="TextureRect" parent="floor"]
+[node name="TextureRect6" type="TextureRect" parent="wall"]
+offset_left = 1.0
+offset_top = -6.09159e-05
+offset_right = 526.0
+offset_bottom = 53.9999
+scale = Vector2(0.984577, 1.02761)
+texture = ExtResource("2_hkgax")
+
+[node name="TextureRect7" type="TextureRect" parent="wall"]
+offset_left = 1150.0
+offset_top = 56.0
+offset_right = 1675.0
+offset_bottom = 110.0
+rotation = -3.14159
+scale = Vector2(0.990676, 1.03475)
+texture = ExtResource("2_hkgax")
+flip_v = true
+
+[node name="TextureRect10" type="TextureRect" parent="wall"]
+offset_left = 1152.0
+offset_top = 162.0
+offset_right = 1677.0
+offset_bottom = 216.0
+rotation = -4.71239
+scale = Vector2(0.924201, 1.07245)
+texture = ExtResource("2_hkgax")
+flip_v = true
+
+[node name="TextureRect5" type="TextureRect" parent="wall"]
+offset_right = 525.0
+offset_bottom = 288.0
+scale = Vector2(0.107008, 0.576338)
+texture = ExtResource("4_lstjg")
+
+[node name="TextureRect8" type="TextureRect" parent="wall"]
+offset_left = 980.0
+offset_top = 56.0
+offset_right = 1505.0
+offset_bottom = 344.0
+rotation = 4.71239
+scale = Vector2(0.106361, 0.596525)
+texture = ExtResource("4_lstjg")
+
+[node name="TextureRect22" type="TextureRect" parent="wall"]
+offset_left = 1152.0
+offset_top = 162.0
+offset_right = 1677.0
+offset_bottom = 450.0
+rotation = 7.85398
+scale = Vector2(0.101857, 0.607077)
+texture = ExtResource("4_lstjg")
+
+[node name="TextureRect11" type="TextureRect" parent="wall"]
+offset_left = 229.0
+offset_top = 487.0
+offset_right = 754.0
+offset_bottom = 775.0
+rotation = 4.71239
+scale = Vector2(0.103884, 0.596525)
+texture = ExtResource("4_lstjg")
+
+[node name="TextureRect17" type="TextureRect" parent="wall"]
+offset_left = 400.0
+offset_top = 485.0
+offset_right = 925.0
+offset_bottom = 773.0
+rotation = 4.71239
+scale = Vector2(0.10191, 0.60432)
+texture = ExtResource("4_lstjg")
+
+[node name="TextureRect13" type="TextureRect" parent="wall"]
+offset_left = 977.0
+offset_top = 430.0
+offset_right = 3557.0
+offset_bottom = 724.0
+rotation = 4.71239
+scale = Vector2(0.041714, 0.396134)
+texture = ExtResource("5_ypmlf")
+
+[node name="TextureRect19" type="TextureRect" parent="wall"]
+offset_left = 978.0
+offset_top = 323.0
+offset_right = 3558.0
+offset_bottom = 617.0
+rotation = 4.71239
+scale = Vector2(0.041714, 0.394867)
+texture = ExtResource("5_ypmlf")
+
+[node name="TextureRect16" type="TextureRect" parent="wall"]
+offset_left = 921.0
+offset_top = 488.0
+offset_right = 1446.0
+offset_bottom = 776.0
+rotation = 4.71239
+scale = Vector2(0.106361, 0.596525)
+texture = ExtResource("4_lstjg")
+
+[node name="TextureRect15" type="TextureRect" parent="wall"]
+offset_left = 975.0
+offset_top = 487.0
+offset_right = 1500.0
+offset_bottom = 775.0
+rotation = 4.71239
+scale = Vector2(0.108151, 0.613902)
+texture = ExtResource("4_lstjg")
+
+[node name="TextureRect21" type="TextureRect" parent="wall"]
+offset_left = 921.0
+offset_top = 163.0
+offset_right = 1446.0
+offset_bottom = 451.0
+rotation = 6.28319
+scale = Vector2(0.107192, 0.555008)
+texture = ExtResource("4_lstjg")
+
+[node name="TextureRect20" type="TextureRect" parent="wall"]
+offset_left = 921.0
+offset_top = 272.0
+offset_right = 1446.0
+offset_bottom = 560.0
+rotation = 6.28319
+scale = Vector2(0.107192, 0.555008)
+texture = ExtResource("4_lstjg")
+
+[node name="TextureRect14" type="TextureRect" parent="wall"]
+offset_left = 287.0
+offset_top = 216.0
+offset_right = 812.0
+offset_bottom = 504.0
+rotation = 3.14159
+scale = Vector2(0.108835, 0.559017)
+texture = ExtResource("4_lstjg")
+
+[node name="TextureRect12" type="TextureRect" parent="wall"]
+offset_left = 229.0
+offset_top = 378.0
+offset_right = 754.0
+offset_bottom = 432.0
+scale = Vector2(0.98998, 1.00383)
+texture = ExtResource("2_hkgax")
+flip_h = true
+
+[node name="TextureRect4" type="TextureRect" parent="wall"]
+offset_top = 593.0
+offset_right = 525.0
+offset_bottom = 647.0
+rotation = -1.5708
+scale = Vector2(0.923601, 1.04271)
+texture = ExtResource("2_hkgax")
+
+[node name="TextureRect9" type="TextureRect" parent="wall"]
+offset_left = 690.0
+offset_top = 486.0
+offset_right = 1215.0
+offset_bottom = 540.0
+rotation = -1.5708
+scale = Vector2(0.92473, 1.07125)
+texture = ExtResource("2_hkgax")
+
+[node name="TextureRect3" type="TextureRect" parent="wall"]
 offset_left = 632.0
 offset_top = 592.0
 offset_right = 1157.0
@@ -46,14 +223,17 @@ scale = Vector2(0.98998, 1.04)
 texture = ExtResource("2_hkgax")
 flip_h = true
 
-[node name="Player" parent="floor" instance=ExtResource("3_fbr1q")]
-position = Vector2(580, 618)
-
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(576.5, 677)
 shape = SubResource("RectangleShape2D_fbr1q")
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+position = Vector2(1188, 111)
+shape = SubResource("RectangleShape2D_ypmlf")
 
 [node name="pause_button" parent="." instance=ExtResource("5_68m83")]
 offset_left = 1107.0
@@ -89,6 +269,11 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_lstjg")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ypmlf")
 icon = ExtResource("7_50mr8")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(518, 2, -2, 1, -2, 648, 512, 648, 515, 590, 56, 592, 57, 54, 225, 57, 228, 215, 291, 216, 293, 55, 518, 55, 537, -61, 639, -56, 634, 57, 694, 55, 692, 382, 233, 379, 230, 489, 752, 493, 748, 54, 1225, 54, 1225, 165, 922, 162, 921, 484, 1093, 487, 1093, 590, 637, 590, 644, 727, 515, 720, 505, 661, 479, 719, 537, 766, 1265, 761, 1254, -4, 512, -102)
+
 [node name="coin" parent="." instance=ExtResource("8_xh8qj")]
 position = Vector2(224, 558)
 
@@ -102,13 +287,20 @@ position = Vector2(215, 528)
 position = Vector2(185, 550)
 
 [node name="coin5" parent="." instance=ExtResource("8_xh8qj")]
-position = Vector2(1087, 496)
+position = Vector2(862, 543)
 
 [node name="coin6" parent="." instance=ExtResource("8_xh8qj")]
-position = Vector2(1044, 488)
+position = Vector2(900, 568)
 
 [node name="coin7" parent="." instance=ExtResource("8_xh8qj")]
-position = Vector2(973, 408)
+position = Vector2(578, 128)
+
+[node name="SpawnStart" type="Marker2D" parent="."]
+position = Vector2(579, 608)
+
+[node name="SpawnR1U1" type="Marker2D" parent="."]
+position = Vector2(1101, 108)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
 [connection signal="pressed" from="reset" to="." method="_on_reset_pressed"]
