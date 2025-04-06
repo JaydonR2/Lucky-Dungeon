@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvpohujishqxe"
-path="res://.godot/imported/Chests open 3.png-a00e575d46932c9bc04b40358552113c.ctex"
+path="res://.godot/imported/Chests open 3.png-1a4b2a85632ed2b73fa2c561890f7b90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://animations/Chests open 3.png"
-dest_files=["res://.godot/imported/Chests open 3.png-a00e575d46932c9bc04b40358552113c.ctex"]
+source_file="res://Chests open 3.png"
+dest_files=["res://.godot/imported/Chests open 3.png-1a4b2a85632ed2b73fa2c561890f7b90.ctex"]
 
 [params]
 
