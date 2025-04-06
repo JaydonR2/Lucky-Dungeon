@@ -10,6 +10,7 @@ script/source = "extends Node2D
 
 func _on_scene_transition_body_entered(body: Node2D) -> void:
 	if body.name == \"Player\":
+		GameState.previous_room=\"StartRoom\"
 		call_deferred(\"_change_sceneRoomR1\")
 
 func _change_sceneRoomR1():
@@ -17,6 +18,7 @@ func _change_sceneRoomR1():
 
 func _on_scene_tran_up_body_entered(body: Node2D) -> void:
 	if body.name == \"Player\":
+		GameState.previous_room=\"StartRoom\"
 		call_deferred(\"_change_sceneRoomU1\")
 		
 func _change_sceneRoomU1():
