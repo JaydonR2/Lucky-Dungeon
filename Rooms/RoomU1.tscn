@@ -241,9 +241,6 @@ offset_top = 9.0
 offset_right = 1107.0
 offset_bottom = 9.0
 
-[node name="Health" parent="." instance=ExtResource("6_50mr8")]
-position = Vector2(66, 45)
-
 [node name="Pause_menu" parent="." instance=ExtResource("6_xh8qj")]
 visible = false
 z_index = 1
@@ -268,6 +265,10 @@ scale = Vector2(0.0428735, 0.0405039)
 theme_override_styles/hover = SubResource("StyleBoxFlat_lstjg")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ypmlf")
 icon = ExtResource("7_50mr8")
+
+[node name="Health" parent="." instance=ExtResource("6_50mr8")]
+unique_name_in_owner = true
+position = Vector2(70, 44)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
