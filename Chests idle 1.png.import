@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://clc8yh1c2mpnb"
-path="res://.godot/imported/Chests idle 1.png-43e532887e19db9b2fc384aedb83936f.ctex"
+path="res://.godot/imported/Chests idle 1.png-8ecad49b9d76ae4c7b76a7fdf00b106e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://animations/Chests idle 1.png"
-dest_files=["res://.godot/imported/Chests idle 1.png-43e532887e19db9b2fc384aedb83936f.ctex"]
+source_file="res://Chests idle 1.png"
+dest_files=["res://.godot/imported/Chests idle 1.png-8ecad49b9d76ae4c7b76a7fdf00b106e.ctex"]
 
 [params]
 

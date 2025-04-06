@@ -1,6 +1,7 @@
 extends Control
 
 func _ready():
+	await get_tree().create_timer(1.3).timeout
 	$VBoxContainer/StartButton.grab_focus()
 
 func _on_start_button_pressed() -> void:
