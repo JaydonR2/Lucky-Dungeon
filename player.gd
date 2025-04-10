@@ -33,6 +33,10 @@ func _physics_process(delta):
 func DecreaseHealth():
 	PlayerHealth.health_tracker = PlayerHealth.health_tracker - 0.5
 	health.update_health()
+	$AnimatedSprite2D.hide()
+	$damage.show()
+	$damage.play("damage")
+	
 	
 func UpdateHealth():
 	health.update_health()
@@ -46,3 +50,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 # roomR1 health test
 func _on_area_2d_2_body_entered(body: Node2D) -> void:
 	DecreaseHealth()
+
+
+func _on_damage_animation_finished() -> void:
+	$damage.hide()
+	$AnimatedSprite2D.show()

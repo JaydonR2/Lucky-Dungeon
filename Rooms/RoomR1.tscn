@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bvw56lc5sjmna" path="res://Textures/dungeon_wall_long.jpg" id="5_01wad"]
 [ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="6_01wad"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="7_2r801"]
-[ext_resource type="PackedScene" path="res://health.tscn" id="7_lj7xt"]
+[ext_resource type="PackedScene" uid="uid://dqu0wjqn8hj7b" path="res://health.tscn" id="7_lj7xt"]
 [ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="8_3jk76"]
 [ext_resource type="PackedScene" uid="uid://lj75ulh8mvmu" path="res://inventory/items/coin.tscn" id="9_xmgjn"]
 [ext_resource type="Texture2D" uid="uid://cnjvxrxkbv1uj" path="res://Textures/skull.png" id="12_k3te0"]
@@ -199,10 +199,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 545.0
-offset_top = 284.0
-offset_right = 545.0
-offset_bottom = 284.0
+offset_left = 0.0
+offset_top = 24.9999
+offset_right = 0.0
+offset_bottom = 24.9999
 scale = Vector2(0.960175, 1.01674)
 size_flags_vertical = 4
 

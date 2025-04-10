@@ -1,5 +1,8 @@
 extends Node2D
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("paused"):
+		pauseMenu()
 func _ready():
 	var health = $Health
 	health.update_health()
