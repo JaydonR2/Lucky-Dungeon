@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3qa26he2kgwo"]
+
+[ext_resource type="Script" uid="uid://yrai224mwstm" path="res://info_page.gd" id="1_4cdk6"]
+[ext_resource type="Texture2D" uid="uid://b8tqh8xnj1qtj" path="res://Textures/InfoScreen.svg" id="1_7ukle"]
+[ext_resource type="Theme" uid="uid://b7ragqt51e283" path="res://button_theme.tres" id="2_4cdk6"]
+
+[node name="InfoPage" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 6
+size_flags_vertical = 6
+script = ExtResource("1_4cdk6")
+
+[node name="Container" type="Container" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRectcont" type="TextureRect" parent="Container"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_7ukle")
+
+[node name="Return" type="Button" parent="Container/TextureRectcont"]
+layout_mode = 0
+offset_left = 680.0
+offset_top = 358.0
+offset_right = 741.0
+offset_bottom = 389.0
+scale = Vector2(1.3748, 1.20966)
+theme = ExtResource("2_4cdk6")
+text = "Return"
+
+[connection signal="pressed" from="Container/TextureRectcont/Return" to="." method="_on_return_pressed"]
