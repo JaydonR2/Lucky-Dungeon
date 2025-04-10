@@ -1,0 +1,84 @@
+[gd_scene load_steps=14 format=3 uid="uid://drhlppkgxxobf"]
+
+[ext_resource type="Script" uid="uid://c6242qmptysl7" path="res://Chest.gd" id="1_5udua"]
+[ext_resource type="Texture2D" uid="uid://clc8yh1c2mpnb" path="res://Chests idle 1.png" id="2_g7fd0"]
+[ext_resource type="Texture2D" uid="uid://dl2rdipgvcs2t" path="res://Chests idle 2.png" id="3_jfagf"]
+[ext_resource type="Texture2D" uid="uid://ddvypko0hgw3k" path="res://Chests idle 3.png" id="4_me70l"]
+[ext_resource type="Texture2D" uid="uid://p5lyunnhtaxh" path="res://Chests idle 4.png" id="5_6rute"]
+[ext_resource type="Texture2D" uid="uid://j312lu1ckyx" path="res://Chests open 1.png" id="6_lkwns"]
+[ext_resource type="Texture2D" uid="uid://ch4rsb7nlwkim" path="res://Chests open 2.png" id="7_jnhi2"]
+[ext_resource type="Texture2D" uid="uid://cvpohujishqxe" path="res://Chests open 3.png" id="8_3mspy"]
+[ext_resource type="Texture2D" uid="uid://cg83nhn6p4jbc" path="res://Chests open 4.png" id="9_7t2a8"]
+[ext_resource type="Texture2D" uid="uid://cgu8yl4vmwr2x" path="res://Chests open 5.png" id="10_yrck5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tturf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g7fd0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jfagf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_me70l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6rute")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_lkwns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jnhi2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3mspy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_7t2a8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_yrck5")
+}],
+"loop": false,
+"name": &"open",
+"speed": 7.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g6mye"]
+size = Vector2(28.6162, 22.2298)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lkwns"]
+size = Vector2(20.5, 10.5)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_5udua")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(4.39692, -3)
+scale = Vector2(1.02062, 0.719756)
+sprite_frames = SubResource("SpriteFrames_tturf")
+animation = &"open"
+autoplay = "default"
+
+[node name="hitbox" type="Area2D" parent="."]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox"]
+position = Vector2(4.39692, -3)
+scale = Vector2(1.02062, 0.719756)
+shape = SubResource("RectangleShape2D_g6mye")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(4, -3)
+shape = SubResource("RectangleShape2D_lkwns")
+
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

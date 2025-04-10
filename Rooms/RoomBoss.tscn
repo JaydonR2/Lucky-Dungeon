@@ -1,0 +1,208 @@
+[gd_scene load_steps=11 format=3 uid="uid://boanlahbtyma7"]
+
+[ext_resource type="Texture2D" uid="uid://b86t3r7hqhf31" path="res://Textures/dungeon_backgroundDark.jpg" id="1_0as20"]
+[ext_resource type="Script" uid="uid://dncr4vgu2lb7s" path="res://Rooms/room_Boss.gd" id="1_ro64h"]
+[ext_resource type="PackedScene" uid="uid://bt1y1u8tsrjn1" path="res://player.tscn" id="2_otmki"]
+[ext_resource type="Texture2D" uid="uid://8qina2j1kpyd" path="res://Textures/stairBottom.jpg" id="2_ro64h"]
+[ext_resource type="Texture2D" uid="uid://d18243pf1s30d" path="res://Textures/dungeon_wallDark.jpg" id="3_ro64h"]
+[ext_resource type="Texture2D" uid="uid://bsko2oiy8gyff" path="res://Textures/dungeon_wallDark_long.jpg" id="4_3wgxn"]
+[ext_resource type="Texture2D" uid="uid://ba2c5rut10oit" path="res://Textures/dungeon_wallDark_single.jpg" id="5_10j5l"]
+[ext_resource type="PackedScene" path="res://health.tscn" id="8_s1fco"]
+[ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="9_33eoq"]
+[ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="10_lvpit"]
+
+[node name="RoomBoss" type="Node2D"]
+script = ExtResource("1_ro64h")
+
+[node name="floor" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="floor"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_0as20")
+
+[node name="TextureRect10" type="TextureRect" parent="floor"]
+offset_left = 55.0
+offset_right = 578.0
+offset_bottom = 54.0
+rotation = 1.5708
+scale = Vector2(0.940092, 1.01112)
+texture = ExtResource("4_3wgxn")
+
+[node name="TextureRect15" type="TextureRect" parent="floor"]
+offset_left = -4.57764e-05
+offset_top = 402.871
+offset_right = 359.0
+offset_bottom = 807.871
+rotation = 4.71239
+scale = Vector2(0.450612, 0.492826)
+texture = ExtResource("2_ro64h")
+
+[node name="Player" parent="floor" instance=ExtResource("2_otmki")]
+position = Vector2(59.0001, 328)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="blockLong" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 56.9667
+offset_top = 587.048
+offset_right = 146.967
+offset_bottom = 875.048
+rotation = 3.14159
+scale = Vector2(0.632963, 0.527946)
+texture = ExtResource("3_ro64h")
+
+[node name="blockShort" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 56.9667
+offset_top = 587.048
+offset_right = 112.967
+offset_bottom = 643.048
+rotation = 1.5708
+scale = Vector2(1.09021, 1.01112)
+texture = ExtResource("5_10j5l")
+
+[node name="wall" type="Node2D" parent="."]
+
+[node name="TextureRect4" type="TextureRect" parent="wall"]
+offset_left = 1152.0
+offset_right = 1242.0
+offset_bottom = 288.0
+rotation = 1.5708
+scale = Vector2(0.611425, 0.593274)
+texture = ExtResource("3_ro64h")
+
+[node name="TextureRect3" type="TextureRect" parent="wall"]
+offset_left = 518.0
+offset_right = 1041.0
+offset_bottom = 54.0
+scale = Vector2(0.990241, 1.01726)
+texture = ExtResource("4_3wgxn")
+
+[node name="TextureRect18" type="TextureRect" parent="wall"]
+offset_left = 518.0
+offset_right = 1041.0
+offset_bottom = 54.0
+scale = Vector2(0.990241, 1.01726)
+texture = ExtResource("4_3wgxn")
+
+[node name="TextureRect6" type="TextureRect" parent="wall"]
+offset_left = 1152.0
+offset_top = 648.0
+offset_right = 1242.0
+offset_bottom = 936.0
+rotation = 3.14159
+scale = Vector2(0.656053, 0.545403)
+texture = ExtResource("3_ro64h")
+
+[node name="TextureRect11" type="TextureRect" parent="wall"]
+offset_left = 57.0001
+offset_top = 158.0
+offset_right = 147.0
+offset_bottom = 446.0
+rotation = 3.14159
+scale = Vector2(0.632963, 0.527946)
+texture = ExtResource("3_ro64h")
+
+[node name="TextureRect14" type="TextureRect" parent="wall"]
+offset_left = 57.0001
+offset_top = 161.0
+offset_right = 147.0
+offset_bottom = 449.0
+rotation = 3.14159
+scale = Vector2(0.632963, 0.537839)
+texture = ExtResource("3_ro64h")
+
+[node name="TextureRect13" type="TextureRect" parent="wall"]
+offset_left = 57.0
+offset_top = 595.0
+offset_right = 147.0
+offset_bottom = 883.0
+rotation = 3.14159
+scale = Vector2(0.632028, 0.562119)
+texture = ExtResource("3_ro64h")
+
+[node name="TextureRect5" type="TextureRect" parent="wall"]
+offset_left = 1152.0
+offset_top = 55.0
+offset_right = 1675.0
+offset_bottom = 109.0
+rotation = 1.5708
+scale = Vector2(0.92955, 1.10219)
+texture = ExtResource("4_3wgxn")
+
+[node name="TextureRect8" type="TextureRect" parent="wall"]
+offset_left = 862.0
+offset_top = 648.0
+offset_right = 1385.0
+offset_bottom = 702.0
+rotation = 3.14159
+scale = Vector2(0.990241, 0.992834)
+texture = ExtResource("4_3wgxn")
+
+[node name="TextureRect9" type="TextureRect" parent="wall"]
+offset_left = 516.0
+offset_top = 648.0
+offset_right = 1039.0
+offset_bottom = 702.0
+rotation = 3.14159
+scale = Vector2(0.986608, 0.99558)
+texture = ExtResource("4_3wgxn")
+
+[node name="TextureRect7" type="TextureRect" parent="wall"]
+offset_left = 1093.0
+offset_top = 648.0
+offset_right = 1616.0
+offset_bottom = 702.0
+rotation = 3.14159
+scale = Vector2(0.990259, 0.999345)
+texture = ExtResource("4_3wgxn")
+
+[node name="TextureRect2" type="TextureRect" parent="wall"]
+offset_right = 523.0
+offset_bottom = 54.0
+scale = Vector2(0.990241, 1.01726)
+texture = ExtResource("4_3wgxn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+polygon = PackedVector2Array(-1, -1, 1150, 0, 1153, 649, 1, 652, 1, 22, 57, 56, 59, 596, 1095, 599, 1093, 53, 67, 54)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(57, 260, 150, 259, 150, 384, 57, 385, 58, 403, 173, 403, 172, 242, 55, 242)
+
+[node name="Health" parent="." instance=ExtResource("8_s1fco")]
+unique_name_in_owner = true
+position = Vector2(70, 44)
+
+[node name="pause_button" parent="." instance=ExtResource("9_33eoq")]
+offset_left = 1107.0
+offset_top = 9.0
+offset_right = 1107.0
+offset_bottom = 9.0
+
+[node name="Pause_menu" parent="." instance=ExtResource("10_lvpit")]
+visible = false
+z_index = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 545.0
+offset_top = 284.0
+offset_right = 545.0
+offset_bottom = 284.0
+scale = Vector2(0.960175, 1.01674)
+size_flags_vertical = 4
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://c3h4p86apw8vu"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_e2o6t"]
+[ext_resource type="PackedScene" path="res://pause_menu.tscn" id="2_feb5d"]
+[ext_resource type="PackedScene" uid="uid://uk8klmgrkg2c" path="res://pause_button.tscn" id="3_feb5d"]
+[ext_resource type="PackedScene" path="res://background.tscn" id="4_fc0e3"]
+[ext_resource type="Texture2D" uid="uid://ccfvwilxfrr1v" path="res://Icons/icons8-reset-50.png" id="5_aheac"]
+[ext_resource type="Script" path="res://reset.gd" id="5_i406v"]
+
+[sub_resource type="TileSet" id="TileSet_lhf7i"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_e2o6t")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(568, 304)
+scale = Vector2(2.91718, 2.37017)
+tile_set = SubResource("TileSet_lhf7i")
+format = 2
+
+[node name="Background" parent="." instance=ExtResource("4_fc0e3")]
+position = Vector2(344, 116)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Pause_menu" parent="." instance=ExtResource("2_feb5d")]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 545.0
+offset_top = 284.0
+offset_right = 545.0
+offset_bottom = 284.0
+scale = Vector2(0.960175, 1.01674)
+size_flags_vertical = 4
+
+[node name="pause_button" parent="." instance=ExtResource("3_feb5d")]
+offset_left = 1099.0
+offset_top = 7.0
+offset_right = 1099.0
+offset_bottom = 7.0
+
+[node name="Reset" type="Button" parent="."]
+offset_left = 1025.0
+offset_top = 7.0
+offset_right = 1083.0
+offset_bottom = 65.0
+icon = ExtResource("5_aheac")
+script = ExtResource("5_i406v")
+
+[connection signal="pressed" from="Reset" to="Reset" method="_on_pressed"]

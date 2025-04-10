@@ -5,6 +5,11 @@ extends Control
 func _on_resume_pressed() -> void:
 	main.pauseMenu()
 	
-
+func _on_load_pressed() -> void:
+	main.load_game()
+	main.pauseMenu()
+	
 func _on_quit_pressed() -> void:
-	get_tree().quit()
+	main.get_tree().paused = false
+	GameState.previous_room = ""
+	get_tree().change_scene_to_file("res://menu/menu.tscn")

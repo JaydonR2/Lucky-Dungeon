@@ -29,8 +29,9 @@ script = ExtResource("1_d5o6i")
 
 [node name="play" type="Button" parent="."]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = -1.0
+offset_right = 799.0
+offset_bottom = 800.0
 scale = Vector2(0.0487595, 0.0487595)
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5b2kk")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_6y8j0")
@@ -41,6 +42,7 @@ icon = ExtResource("2_d5o6i")
 
 [node name="pause" type="Button" parent="."]
 visible = false
+layout_mode = 0
 offset_right = 8.0
 offset_bottom = 8.0
 scale = Vector2(0.0487595, 0.0487595)
