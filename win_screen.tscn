@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7wusnjql0v28"]
+
+[ext_resource type="Script" uid="uid://bgo2hivvasve4" path="res://win_screen.gd" id="1_l5t5q"]
+[ext_resource type="Texture2D" uid="uid://clhd6vp10ryey" path="res://Win_screen.png" id="2_1txte"]
+[ext_resource type="Theme" uid="uid://b7ragqt51e283" path="res://button_theme.tres" id="3_26557"]
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l5t5q")
+
+[node name="Container" type="Container" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Container"]
+layout_mode = 2
+texture = ExtResource("2_1txte")
+
+[node name="Button" type="Button" parent="Container/TextureRect"]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 340.0
+offset_right = 567.0
+offset_bottom = 374.0
+theme = ExtResource("3_26557")
+text = "Goodbye"
+
+[connection signal="pressed" from="Container/TextureRect/Button" to="." method="_on_button_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bt1y1u8tsrjn1"]
+[gd_scene load_steps=21 format=3 uid="uid://bt1y1u8tsrjn1"]
 
 [ext_resource type="Script" uid="uid://dat8uexpp7jml" path="res://player.gd" id="1_bdpxd"]
 [ext_resource type="Resource" uid="uid://d3kmew1hl50cy" path="res://inventory/playerinv.tres" id="2_hqtel"]
@@ -12,6 +12,11 @@
 [ext_resource type="Texture2D" uid="uid://dek3wll7uoi3g" path="res://Damage-Sheet4.png" id="6_606se"]
 [ext_resource type="Texture2D" uid="uid://bl83qn0wb22e" path="res://Idle-Sheet 4.png" id="6_b26j0"]
 [ext_resource type="Texture2D" uid="uid://d37xu2adi3g60" path="res://Damage-Sheet5.png" id="7_u1c27"]
+[ext_resource type="Texture2D" uid="uid://cojmm24uxwm08" path="res://ATTACK/ATTACK/FX001_01.png" id="8_op7ga"]
+[ext_resource type="Texture2D" uid="uid://dkucargwe1bqv" path="res://ATTACK/ATTACK/FX001_02.png" id="9_q13i1"]
+[ext_resource type="Texture2D" uid="uid://crn5kby1nihdo" path="res://ATTACK/ATTACK/FX001_03.png" id="10_pylmc"]
+[ext_resource type="Texture2D" uid="uid://dpduv7gdcoxo2" path="res://ATTACK/ATTACK/FX001_04.png" id="11_pbfsw"]
+[ext_resource type="Texture2D" uid="uid://cvh33ays2ovd8" path="res://ATTACK/ATTACK/FX001_05.png" id="12_5tmop"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dw050"]
 animations = [{
@@ -38,6 +43,26 @@ animations = [{
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ospa4"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_op7ga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_q13i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pylmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pbfsw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5tmop")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 15.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_onrkg")
@@ -79,7 +104,7 @@ animation = &"damage"
 position = Vector2(-1, -2)
 scale = Vector2(0.508304, 0.565658)
 sprite_frames = SubResource("SpriteFrames_ospa4")
-animation = &"idle"
+animation = &"attack"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

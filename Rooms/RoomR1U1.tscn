@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d18243pf1s30d" path="res://Textures/dungeon_wallDark.jpg" id="4_nwcen"]
 [ext_resource type="Texture2D" uid="uid://cpu7bw0cancdb" path="res://Textures/stairTop.jpg" id="5_hdjkt"]
 [ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="6_4augu"]
-[ext_resource type="PackedScene" uid="uid://dqu0wjqn8hj7b" path="res://health.tscn" id="7_obyre"]
+[ext_resource type="PackedScene" uid="uid://ehwq4k30pcda" path="res://health.tscn" id="7_obyre"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="8_67j5d"]
 [ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="9_hdjkt"]
 
