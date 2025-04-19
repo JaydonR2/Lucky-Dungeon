@@ -97,6 +97,6 @@ offset_right = 73.0
 offset_bottom = 83.0
 
 [connection signal="pressed" from="Menu/Panel/MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
-[connection signal="pressed" from="Menu/Panel/MarginContainer/VBoxContainer/Info" to="." method="_on_info_pressed"]
 [connection signal="pressed" from="Menu/Panel/MarginContainer/VBoxContainer/Info" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Menu/Panel/MarginContainer/VBoxContainer/Info" to="." method="_on_info_pressed"]
 [connection signal="pressed" from="Menu/Panel/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
