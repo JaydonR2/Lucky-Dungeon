@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="6_7dpdl"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="7_61ydf"]
 [ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="8_psjyh"]
-[ext_resource type="PackedScene" uid="uid://ehwq4k30pcda" path="res://health.tscn" id="9_o842h"]
+[ext_resource type="PackedScene" path="res://health.tscn" id="9_o842h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_svp2g"]
 size = Vector2(36, 82)
@@ -185,10 +185,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 3.0
-offset_top = 26.9999
-offset_right = 3.0
-offset_bottom = 26.9999
+offset_left = 545.0
+offset_top = 284.0
+offset_right = 545.0
+offset_bottom = 284.0
 scale = Vector2(0.960175, 1.01674)
 size_flags_vertical = 4
 

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://d18243pf1s30d" path="res://Textures/dungeon_wallDark.jpg" id="3_ro64h"]
 [ext_resource type="Texture2D" uid="uid://bsko2oiy8gyff" path="res://Textures/dungeon_wallDark_long.jpg" id="4_3wgxn"]
 [ext_resource type="Texture2D" uid="uid://ba2c5rut10oit" path="res://Textures/dungeon_wallDark_single.jpg" id="5_10j5l"]
-[ext_resource type="PackedScene" uid="uid://ehwq4k30pcda" path="res://health.tscn" id="8_s1fco"]
+[ext_resource type="PackedScene" path="res://health.tscn" id="8_s1fco"]
 [ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="9_33eoq"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="10_lvpit"]
 
@@ -198,10 +198,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 5.0
-offset_top = 26.9999
-offset_right = 5.0
-offset_bottom = 26.9999
+offset_left = 545.0
+offset_top = 284.0
+offset_right = 545.0
+offset_bottom = 284.0
 scale = Vector2(0.960175, 1.01674)
 size_flags_vertical = 4
 

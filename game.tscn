@@ -1,16 +1,17 @@
-[gd_scene load_steps=18 format=3 uid="uid://bx52rofse4avo"]
+[gd_scene load_steps=19 format=3 uid="uid://bx52rofse4avo"]
 
 [ext_resource type="Script" uid="uid://dfi72jwor0g8s" path="res://game.gd" id="1_e2o6t"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="2_feb5d"]
 [ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="3_feb5d"]
-[ext_resource type="PackedScene" uid="uid://cgecforh33lgp" path="res://background.tscn" id="4_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://cgecforh33lgp" path="res://Rooms/start_room.tscn" id="4_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://bt1y1u8tsrjn1" path="res://player.tscn" id="5_q8r6a"]
 [ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="5_ryrav"]
-[ext_resource type="PackedScene" uid="uid://ehwq4k30pcda" path="res://health.tscn" id="6_mfdv2"]
+[ext_resource type="PackedScene" path="res://health.tscn" id="6_mfdv2"]
 [ext_resource type="PackedScene" uid="uid://lj75ulh8mvmu" path="res://inventory/items/coin.tscn" id="7_eow3j"]
 [ext_resource type="PackedScene" uid="uid://pbfs7yf0vfwt" path="res://sword.tscn" id="7_j5wjh"]
-[ext_resource type="PackedScene" uid="uid://dlvr06v3p44w5" path="res://Chest.tscn" id="8_vef74"]
-[ext_resource type="Script" uid="uid://dk8h1xwn2y45a" path="res://area_2d.gd" id="12_iotsf"]
+[ext_resource type="PackedScene" uid="uid://drhlppkgxxobf" path="res://Chest.tscn" id="8_vef74"]
+[ext_resource type="Texture2D" uid="uid://63qde4cdv7f" path="res://Icons/floppy-disc-storage-svgrepo-com.svg" id="9_vef74"]
+[ext_resource type="Script" path="res://area_2d.gd" id="12_iotsf"]
 [ext_resource type="PackedScene" uid="uid://7gl6qsba1gxt" path="res://slime_green.tscn" id="14_7sc4i"]
 [ext_resource type="Texture2D" uid="uid://cnjvxrxkbv1uj" path="res://Textures/skull.png" id="14_215e1"]
 
@@ -48,10 +49,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 15.0
-offset_top = 3.0
-offset_right = 15.0
-offset_bottom = 3.0
+offset_left = 545.0
+offset_top = 284.0
+offset_right = 545.0
+offset_bottom = 284.0
 scale = Vector2(0.960175, 1.01674)
 size_flags_vertical = 4
 
@@ -106,6 +107,13 @@ texture_filter = 1
 position = Vector2(310, 90)
 scale = Vector2(1.61804, 2.96498)
 
+[node name="saveicon" type="TextureButton" parent="."]
+offset_left = 990.0
+offset_top = 9.0
+offset_right = 1030.0
+offset_bottom = 49.0
+texture_normal = ExtResource("9_vef74")
+
 [node name="coin" parent="." instance=ExtResource("7_eow3j")]
 position = Vector2(457, 536)
 
@@ -143,4 +151,5 @@ texture = ExtResource("14_215e1")
 position = Vector2(744, 366)
 
 [connection signal="pressed" from="reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="saveicon" to="." method="_on_save_icon_pressed"]
 [connection signal="body_entered" from="PainTest" to="Player" method="_on_area_2d_body_entered"]
