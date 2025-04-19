@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://63qde4cdv7f" path="res://Icons/floppy-disc-storage-svgrepo-com.svg" id="9_vef74"]
 [ext_resource type="Script" path="res://area_2d.gd" id="12_iotsf"]
 [ext_resource type="PackedScene" uid="uid://7gl6qsba1gxt" path="res://slime_green.tscn" id="14_7sc4i"]
+[ext_resource type="PackedScene" uid="uid://duaa1yagg7bh1" path="res://slime_pink.tscn" id="14_80cx4"]
 [ext_resource type="Texture2D" uid="uid://cnjvxrxkbv1uj" path="res://Textures/skull.png" id="14_215e1"]
 
 [sub_resource type="TileSet" id="TileSet_lhf7i"]
@@ -149,6 +150,9 @@ texture = ExtResource("14_215e1")
 
 [node name="slime_green" parent="." instance=ExtResource("14_7sc4i")]
 position = Vector2(744, 366)
+
+[node name="slime_pink" parent="." instance=ExtResource("14_80cx4")]
+position = Vector2(119, 262)
 
 [connection signal="pressed" from="reset" to="." method="_on_reset_pressed"]
 [connection signal="pressed" from="saveicon" to="." method="_on_save_icon_pressed"]
