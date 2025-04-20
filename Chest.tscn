@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://drhlppkgxxobf"]
+[gd_scene load_steps=14 format=3 uid="uid://dlvr06v3p44w5"]
 
 [ext_resource type="Script" uid="uid://c6242qmptysl7" path="res://Chest.gd" id="1_5udua"]
 [ext_resource type="Texture2D" uid="uid://clc8yh1c2mpnb" path="res://Chests idle 1.png" id="2_g7fd0"]
