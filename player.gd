@@ -40,6 +40,14 @@ func UpdateHealth():
 func collect(item):
 	inv.insert(item)
 
+func get_coin_count() -> int:
+	var coin_count: int = 0
+	if inv:
+		for slot in inv.slots:
+			if slot.item and slot.item.name == "Coin":
+				coin_count += slot.amount
+	return coin_count
+
 #game health test
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	DecreaseHealth()

@@ -1,0 +1,11 @@
+join SlimeBoss center
+Hello there, It's been a long time since I've had any visitors...
+You've done well to have made it this far, avoiding all sorts of danger.
+Have you collected any of my treasured coins? They've been scattered around this place for ages.
+In exchange for my treasure I'll let you leave alive, as long as you've collected enough of them that is.
+- Yeah sure, whatever
+	Thank you, let me make sure there are enough coins here...
+	[signal arg="coin_option"]
+- No way
+	So be it, prepare yourself...
+	[signal arg="battle_option"]
