@@ -1,14 +1,17 @@
-[gd_scene load_steps=17 format=3 uid="uid://jqs4x5k71n0l"]
+[gd_scene load_steps=18 format=3 uid="uid://jqs4x5k71n0l"]
 
 [ext_resource type="Texture2D" uid="uid://b86t3r7hqhf31" path="res://Textures/dungeon_backgroundDark.jpg" id="1_2lg5k"]
 [ext_resource type="Script" uid="uid://sem6e4mjw04" path="res://Rooms/room_R1U1.gd" id="1_w7c1r"]
 [ext_resource type="PackedScene" uid="uid://bt1y1u8tsrjn1" path="res://player.tscn" id="2_w7c1r"]
 [ext_resource type="Texture2D" uid="uid://bsko2oiy8gyff" path="res://Textures/dungeon_wallDark_long.jpg" id="3_13ewv"]
 [ext_resource type="Texture2D" uid="uid://8qina2j1kpyd" path="res://Textures/stairBottom.jpg" id="3_67j5d"]
+[ext_resource type="PackedScene" uid="uid://cr3ho2nhi2pvl" path="res://SpikeTrap_dark.tscn" id="3_hdjkt"]
 [ext_resource type="Texture2D" uid="uid://d18243pf1s30d" path="res://Textures/dungeon_wallDark.jpg" id="4_nwcen"]
 [ext_resource type="Texture2D" uid="uid://cpu7bw0cancdb" path="res://Textures/stairTop.jpg" id="5_hdjkt"]
 [ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="6_4augu"]
-[ext_resource type="PackedScene" uid="uid://ehwq4k30pcda" path="res://health.tscn" id="7_obyre"]
+
+[ext_resource type="PackedScene" path="res://health.tscn" id="7_obyre"]
+
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="8_67j5d"]
 [ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="9_hdjkt"]
 
@@ -37,6 +40,9 @@ offset_right = 1151.0
 offset_bottom = 650.0
 scale = Vector2(1.00078, 0.997254)
 texture = ExtResource("1_2lg5k")
+
+[node name="SpikeTrapDark" parent="floor" instance=ExtResource("3_hdjkt")]
+position = Vector2(863, 433)
 
 [node name="TextureRect15" type="TextureRect" parent="."]
 offset_left = 661.0
@@ -256,6 +262,7 @@ position = Vector2(64, 41)
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
 polygon = PackedVector2Array(0, -3, -1, 51, 167, 48, 170, 485, 750, 491, 748, 272, 921, 271, 921, 215, 404, 216, 404, 272, 462.617, 272, 462, 289, 665.36, 313.606, 741, 306, 742, 394, 665.063, 387.894, 460, 411, 461, 431, 233, 428, 233, 51, 1097, 56, 1097, 428, 921, 429, 918, 488, 1094, 486, 1097, 596, 975, 592, 977, 706, 867, 706, 862, 595, 56, 595, 56, 163, -15, 163, -78, 158, -72, 53, -3, 51, -72, 19, -122, 158, -3, 649, 799, 647, 807, 753, 1044, 761, 1032, 647, 1155, 652, 1155, -1)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

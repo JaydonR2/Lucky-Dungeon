@@ -59,12 +59,12 @@ func _on_animation_finished():
 func DecreaseHealth():
 	PlayerHealth.health_tracker = PlayerHealth.health_tracker - 0.5
 	health.update_health()
+
 	taking_damage = true
 	$AnimatedSprite2D.hide()
 	$damage.show()
 	$damage.play("damage")
-	
-	
+
 	
 func UpdateHealth():
 	health.update_health()
@@ -79,8 +79,8 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 func _on_area_2d_2_body_entered(body: Node2D) -> void:
 	DecreaseHealth()
 
-
 func _on_damage_animation_finished() -> void:
 	$damage.hide()
 	taking_damage = false
 	$AnimatedSprite2D.show()
+
