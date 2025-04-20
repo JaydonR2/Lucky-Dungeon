@@ -1,15 +1,68 @@
-[gd_scene load_steps=10 format=3 uid="uid://bt1y1u8tsrjn1"]
+[gd_scene load_steps=21 format=3 uid="uid://bt1y1u8tsrjn1"]
 
 [ext_resource type="Script" uid="uid://dat8uexpp7jml" path="res://player.gd" id="1_bdpxd"]
 [ext_resource type="Resource" uid="uid://d3kmew1hl50cy" path="res://inventory/playerinv.tres" id="2_hqtel"]
 [ext_resource type="Texture2D" uid="uid://ch4omcpchcorc" path="res://Player_sprite.png" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://1d1lwjdv7dsh" path="res://Damage -Sheet1.png" id="3_ivps1"]
 [ext_resource type="Texture2D" uid="uid://6kwd2caqdaoy" path="res://Idle-Sheet 2.png" id="4_1jxqw"]
 [ext_resource type="PackedScene" uid="uid://c65da2b44ojeu" path="res://inventory/inv_ui.tscn" id="4_sweqy"]
+[ext_resource type="Texture2D" uid="uid://csjknq27fx3qw" path="res://Damage-Sheet2.png" id="4_urp6f"]
+[ext_resource type="Texture2D" uid="uid://dt3pqrbsh00jb" path="res://Damage-Sheet3.png" id="5_bwjto"]
 [ext_resource type="Texture2D" uid="uid://dbifdkd0qey1b" path="res://Idle-Sheet 3.png" id="5_dw050"]
+[ext_resource type="Texture2D" uid="uid://dek3wll7uoi3g" path="res://Damage-Sheet4.png" id="6_606se"]
 [ext_resource type="Texture2D" uid="uid://bl83qn0wb22e" path="res://Idle-Sheet 4.png" id="6_b26j0"]
+[ext_resource type="Texture2D" uid="uid://d37xu2adi3g60" path="res://Damage-Sheet5.png" id="7_u1c27"]
+[ext_resource type="Texture2D" uid="uid://cojmm24uxwm08" path="res://ATTACK/ATTACK/FX001_01.png" id="8_op7ga"]
+[ext_resource type="Texture2D" uid="uid://dkucargwe1bqv" path="res://ATTACK/ATTACK/FX001_02.png" id="9_q13i1"]
+[ext_resource type="Texture2D" uid="uid://crn5kby1nihdo" path="res://ATTACK/ATTACK/FX001_03.png" id="10_pylmc"]
+[ext_resource type="Texture2D" uid="uid://dpduv7gdcoxo2" path="res://ATTACK/ATTACK/FX001_04.png" id="11_pbfsw"]
+[ext_resource type="Texture2D" uid="uid://cvh33ays2ovd8" path="res://ATTACK/ATTACK/FX001_05.png" id="12_5tmop"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dw050"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ivps1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_urp6f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bwjto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_606se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_u1c27")
+}],
+"loop": false,
+"name": &"damage",
+"speed": 8.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ospa4"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_op7ga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_q13i1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pylmc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pbfsw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_5tmop")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 15.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_onrkg")
@@ -40,13 +93,19 @@ collision_mask = 7
 script = ExtResource("1_bdpxd")
 inv = ExtResource("2_hqtel")
 
+[node name="damage" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0.282654, -1.88807)
+scale = Vector2(0.556894, 0.535289)
+sprite_frames = SubResource("SpriteFrames_dw050")
+animation = &"damage"
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, -2)
 scale = Vector2(0.508304, 0.565658)
 sprite_frames = SubResource("SpriteFrames_ospa4")
-animation = &"idle"
+animation = &"attack"
 autoplay = "idle"
-frame_progress = 0.115421
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.880092, -1.46188)
@@ -60,3 +119,5 @@ offset_left = -43.5288
 offset_top = -76.6017
 offset_right = 42.4712
 offset_bottom = -14.6017
+
+[connection signal="animation_finished" from="damage" to="." method="_on_damage_animation_finished"]

@@ -1,5 +1,9 @@
 extends Node2D
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("paused"):
+		pauseMenu()
+		
 func _ready():
 	var player = $Player
 	if GameState.previous_room == "RoomR1U1":
