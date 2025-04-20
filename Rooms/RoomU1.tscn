@@ -7,9 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b5w5ufk2q7x6i" path="res://Textures/dungeon_wall.jpg" id="4_lstjg"]
 [ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="5_68m83"]
 [ext_resource type="Texture2D" uid="uid://cn2eeojokhcdv" path="res://Textures/dungeon_wall_square.jpg" id="5_ypmlf"]
-
 [ext_resource type="PackedScene" path="res://health.tscn" id="6_50mr8"]
-
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="6_xh8qj"]
 [ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="7_50mr8"]
 [ext_resource type="PackedScene" uid="uid://lj75ulh8mvmu" path="res://inventory/items/coin.tscn" id="8_xh8qj"]
