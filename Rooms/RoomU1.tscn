@@ -161,6 +161,15 @@ rotation = 4.71239
 scale = Vector2(0.108151, 0.613902)
 texture = ExtResource("4_lstjg")
 
+[node name="TextureRect23" type="TextureRect" parent="wall"]
+offset_left = 517.0
+offset_top = 55.0
+offset_right = 1042.0
+offset_bottom = 343.0
+rotation = 4.71239
+scale = Vector2(0.103408, 0.59822)
+texture = ExtResource("4_lstjg")
+
 [node name="TextureRect21" type="TextureRect" parent="wall"]
 offset_left = 921.0
 offset_top = 163.0
