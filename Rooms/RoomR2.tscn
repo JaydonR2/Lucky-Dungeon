@@ -9,7 +9,9 @@
 [ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="6_7dpdl"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="7_61ydf"]
 [ext_resource type="Texture2D" uid="uid://dnkluqtc2jkk" path="res://Icons/reset-svgrepo-com.svg" id="8_psjyh"]
+
 [ext_resource type="PackedScene" path="res://health.tscn" id="9_o842h"]
+
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_svp2g"]
 size = Vector2(36, 82)
