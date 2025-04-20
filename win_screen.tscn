@@ -5,6 +5,7 @@
 [ext_resource type="Theme" uid="uid://b7ragqt51e283" path="res://button_theme.tres" id="3_26557"]
 
 [node name="WinScreen" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,15 +15,18 @@ grow_vertical = 2
 script = ExtResource("1_l5t5q")
 
 [node name="Container" type="Container" parent="."]
+process_mode = 3
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TextureRect" type="TextureRect" parent="Container"]
+process_mode = 3
 layout_mode = 2
 texture = ExtResource("2_1txte")
 
 [node name="Button" type="Button" parent="Container/TextureRect"]
+process_mode = 3
 layout_mode = 0
 offset_left = 450.0
 offset_top = 340.0

@@ -242,6 +242,7 @@ offset_right = 1107.0
 offset_bottom = 9.0
 
 [node name="Pause_menu" parent="." instance=ExtResource("6_xh8qj")]
+process_mode = 3
 visible = false
 z_index = 1
 anchors_preset = 8

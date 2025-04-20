@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://boanlahbtyma7"]
+[gd_scene load_steps=13 format=3 uid="uid://boanlahbtyma7"]
 
 [ext_resource type="Texture2D" uid="uid://b86t3r7hqhf31" path="res://Textures/dungeon_backgroundDark.jpg" id="1_0as20"]
 [ext_resource type="Script" uid="uid://dncr4vgu2lb7s" path="res://Rooms/room_Boss.gd" id="1_ro64h"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://ehwq4k30pcda" path="res://health.tscn" id="8_s1fco"]
 [ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="9_33eoq"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="10_lvpit"]
+[ext_resource type="PackedScene" uid="uid://b7wusnjql0v28" path="res://win_screen.tscn" id="12_lvpit"]
 
 [node name="RoomBoss" type="Node2D"]
 script = ExtResource("1_ro64h")
@@ -208,5 +209,12 @@ offset_right = 545.0
 offset_bottom = 284.0
 scale = Vector2(0.960175, 1.01674)
 size_flags_vertical = 4
+
+[node name="WinScreen" parent="." instance=ExtResource("12_lvpit")]
+visible = false
+offset_left = 57.0
+offset_top = 82.0
+offset_right = 57.0
+offset_bottom = 82.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

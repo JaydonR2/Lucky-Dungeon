@@ -3,6 +3,9 @@ extends Node2D
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("paused"):
 		pauseMenu()
+	if Input.is_action_just_pressed("Win"):
+		get_tree().paused = true
+		$WinScreen.show()
 func _ready():
 	var health = $Health
 	health.update_health()
