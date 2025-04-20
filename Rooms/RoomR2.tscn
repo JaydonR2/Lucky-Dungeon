@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bci7k51p73xtu" path="res://Rooms/room_R2.gd" id="1_sn7n3"]
 [ext_resource type="Texture2D" uid="uid://bvw56lc5sjmna" path="res://Textures/dungeon_wall_long.jpg" id="2_o7kud"]
 [ext_resource type="PackedScene" uid="uid://bt1y1u8tsrjn1" path="res://player.tscn" id="3_3ji7y"]
-[ext_resource type="PackedScene" path="res://SpikeTrap.tscn" id="3_61ydf"]
+[ext_resource type="PackedScene" uid="uid://r23q16b1sjvx" path="res://SpikeTrap.tscn" id="3_61ydf"]
 [ext_resource type="Texture2D" uid="uid://b5w5ufk2q7x6i" path="res://Textures/dungeon_wall.jpg" id="3_sn7n3"]
 [ext_resource type="PackedScene" uid="uid://bsqixovrqmxws" path="res://pause_button.tscn" id="6_7dpdl"]
 [ext_resource type="PackedScene" uid="uid://b48fjx60a3lpv" path="res://pause_menu.tscn" id="7_61ydf"]
@@ -31,8 +31,6 @@ offset_bottom = 40.0
 texture = ExtResource("1_0r8u3")
 
 [node name="SpikeTrap" parent="floor" instance=ExtResource("3_61ydf")]
-position = Vector2(689, 488)
-scale = Vector2(1.01035, 0.97177)
 
 [node name="Player" parent="floor" instance=ExtResource("3_3ji7y")]
 position = Vector2(31, 547)
